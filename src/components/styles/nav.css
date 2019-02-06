@@ -1,0 +1,31 @@
+@keyframes fadeIn {
+    from {
+        background: rgba(0,0,0,0);
+        box-shadow: 0 6px 18px 0 rgba(0,0,0,0);
+        border-bottom: 2px solid rgba(0,0,0,0);
+    }
+
+    to {
+        background:rgba(61, 61, 61,1);
+        box-shadow: 0 6px 18px 0 rgba(0,0,0,0.2);
+        border-bottom: 2px solid #1BB3E8;
+    }
+}
+
+@keyframes springDown {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.nav-scroll {
+    width: 100%;
+    background: rgba(61, 61, 61,1);
+    box-shadow: 0 6px 18px 0 rgba(0,0,0,0.2);
+    border-bottom: 2px solid #1BB3E8;
+    animation: fadeIn 1s;
+}
