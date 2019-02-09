@@ -5,12 +5,19 @@ import {
   HeadingStyle,
   ParagraphStyle,
   ProblemLink,
+  SubHeadingStyle,
+  UltraSubHeadingStyle,
 } from '../components/styles/TextStyles'
 import { RightIcon } from '../components/styles/IconStyles'
 
 import Layout from '../components/layout'
 import { device } from '../components/styles/MediaQueries'
 import Team from '../components/team'
+
+const AboutHeadingContainer = styled.div`
+  text-align: center;
+  margin-bottom: ${props => props.theme.sectionSpace};
+`
 
 const AboutPageHeadingLight = styled(HeadingStyle)`
   width: ${props => props.theme.maxWidth};
@@ -109,10 +116,21 @@ const AboutPage = ({ location }) => (
     </Helmet>
     <Layout location={location}>
       <AboutWrapper>
+        <AboutHeadingContainer>
+          <HeadingStyle>We know what your business needs to grow</HeadingStyle>
+          <SubHeadingStyle>
+            We've said this before and we will keep on saying it:{' '}
+            <em>
+              a website without targeted content is like a business without
+              customers.
+            </em>
+          </SubHeadingStyle>
+          <UltraSubHeadingStyle>
+            Let your website, your best salesman, do the work for you.
+          </UltraSubHeadingStyle>
+        </AboutHeadingContainer>
         <AboutContainer>
-          <AboutPageHeading>
-            Experience in the <span>modern</span> market
-          </AboutPageHeading>
+          <AboutPageHeading>Experience in the modern market</AboutPageHeading>
           <AboutParagraph>
             Our team is comprised of young, tech-centric individuals that have a
             passion for learning. We love when new technology surfaces because
@@ -124,7 +142,7 @@ const AboutPage = ({ location }) => (
       <AboutWrapperLight>
         <AboutContainer>
           <AboutPageHeadingLight>
-            Experts in <span>all of the above</span>
+            Experts in all of the above
           </AboutPageHeadingLight>
           <AboutParagraphLight>
             Search engine optimization, web design/development, content
@@ -137,9 +155,7 @@ const AboutPage = ({ location }) => (
       </AboutWrapperLight>
       <AboutWrapper>
         <AboutContainer>
-          <AboutPageHeading>
-            We <span>care</span> about our clients
-          </AboutPageHeading>
+          <AboutPageHeading>We care about our clients</AboutPageHeading>
           <AboutParagraph>
             At the end of the day we are here for you. As business owners we
             both undertand that customers are what keeps a business alive. We

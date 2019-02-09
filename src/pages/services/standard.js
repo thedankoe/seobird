@@ -12,6 +12,7 @@ import {
 import CheckoutPackage from '../../components/checkoutPackage'
 import { FAQParagraph } from '../faq'
 import { CheckMark } from '../../components/styles/IconStyles'
+import PackageBG from '../../images/package-buy-bg.jpg'
 
 export const PackageWrapper = styled.div`
   position: relative;
@@ -39,8 +40,29 @@ export const PackageBuyContainer = styled.div`
   grid-template-columns: 2fr 1fr;
   grid-gap: ${props => props.theme.textSpace};
 `
+export const PackageBuyCard = styled.div`
+  margin-bottom: ${props => props.theme.textSpace};
+  padding: ${props => props.theme.textSpace};
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(3, 89, 117, 0.9),
+      rgba(27, 179, 232, 0.9)
+    ),
+    url(${PackageBG});
+  background-position: center;
+  background-size: cover;
+  color: #fff;
+  border-radius: 6px;
+  box-shadow: ${props => props.theme.bs};
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  grid-gap: ${props => props.theme.textSpace};
+`
 
 export const PackageBuyList = styled.ul`
+  padding: 2rem;
+  background: rgba(62, 62, 62, 0.5);
+  border-radius: 4px;
   font-size: 2.2rem;
   color: #fff;
   text-align: left;
@@ -51,22 +73,6 @@ export const PackageBuyPara = styled(ParagraphStyle)`
   margin-bottom: 2rem;
   color: #fff;
   font-size: 2.8rem;
-`
-
-export const PackageBuyCard = styled.div`
-  margin-bottom: ${props => props.theme.textSpace};
-  padding: 2rem;
-  background: linear-gradient(
-    to right bottom,
-    ${props => props.theme.primaryLight},
-    ${props => props.theme.primary}
-  );
-  color: #fff;
-  border-radius: 6px;
-  box-shadow: ${props => props.theme.bs};
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  grid-gap: ${props => props.theme.textSpace};
 `
 
 export const PackageBuyCTA = styled.div`

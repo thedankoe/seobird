@@ -61,10 +61,13 @@ const FAQPage = ({ location }) => (
               What if I just want a website?
             </UltraSubHeadingStyle>
             <ParagraphStyle>
-              We offer standalone websites for a low monthly fee on a 6 month
-              contract. We undertand that business owners enjoy a smaller
-              monthly payment rather than a lump sum. If you are interested is
-              paying a one time fee{' '}
+              We offer{' '}
+              <ColoredLink to="/services/website">
+                standalone websites
+              </ColoredLink>{' '}
+              for a low monthly fee on a 6 month contract. We undertand that
+              business owners enjoy a smaller monthly payment rather than a lump
+              sum. If you are interested in paying a one time fee{' '}
               <ColoredLink to="/contact">contact us</ColoredLink>.
             </ParagraphStyle>
             <FAQParagraph>

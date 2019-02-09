@@ -6,19 +6,18 @@ import ContactForm from '../components/contactForm'
 import ContactImg from '../images/marketing-contact-bg.jpg'
 
 const ContactWrapper = styled.div`
-  position: relative;
   width: 100%;
   background-image: linear-gradient(
       to right bottom,
-      rgba(62, 62, 62, 0.8),
-      rgba(32, 32, 32, 0.8)
+      rgba(3, 89, 117, 0.9),
+      rgba(27, 179, 232, 0.9)
     ),
     url(${ContactImg});
   background-position: center;
   background-size: cover;
 `
 
-const PricingPage = ({ location }) => (
+const ContactPage = ({ location }) => (
   <>
     <Helmet
       title="Contact | SEOBird"
@@ -37,4 +36,4 @@ const PricingPage = ({ location }) => (
   </>
 )
 
-export default PricingPage
+export default ContactPage

@@ -83,6 +83,15 @@ const ParagraphStyle = styled.p`
   }
 `
 
+const ParagraphStyleLight = styled.p`
+  color: #fff;
+  font-size: 2.2rem;
+  font-weight: 500;
+  span {
+    font-weight: 600;
+  }
+`
+
 const LinkStyle = styled(Link)`
   width: 15rem;
   margin: 0 auto;
@@ -209,6 +218,7 @@ export {
   UltraSubHeadingStyle,
   SubHeadingStyleLight,
   ParagraphStyle,
+  ParagraphStyleLight,
   LinkStyle,
   SecondaryLinkStyle,
   FeedbackLinkStyle,

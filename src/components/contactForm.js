@@ -1,28 +1,34 @@
 import React from 'react'
 import styled from 'styled-components'
-import { HeadingStyle } from './styles/TextStyles'
+import {
+  HeadingStyleLight,
+  SubHeadingStyleLight,
+  ParagraphStyleLight,
+} from './styles/TextStyles'
 import { device } from './styles/MediaQueries'
 
 const FormWrapper = styled.div`
   width: 100%;
+  margin: 0 auto;
   padding: ${props => props.theme.sectionSpace} 0;
   display: flex;
   flex-direction: column;
   align-items: center;
 `
 
-const FormHeading = styled(HeadingStyle)`
-  color: #fff;
-  text-align: center;
-  margin-bottom: ${props => props.theme.textSpace};
+const FormStyle = styled.form`
+  margin-top: ${props => props.theme.textSpace};
 `
 
 const FormGroup = styled.div`
   width: 100%;
+  display: flex;
+  flex-direction: column;
   label {
     color: #fff;
-    transform: translateY(3rem);
-    display: none;
+    font-size: 2.2rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
   }
   input {
     :focus {
@@ -54,7 +60,7 @@ const FormGroup = styled.div`
       outline: none;
     }
     ::placeholder {
-      font-family: Raleway, sans-serif;
+      font-family: Roboto, sans-serif;
       font-size: 1.8rem;
       color: ${props => props.theme.lightGrey};
     }
@@ -80,7 +86,7 @@ const FormGroup = styled.div`
 
 const FormButton = styled.button`
   padding: 1.5rem 2rem;
-  background: ${props => props.theme.secondary};
+  background: ${props => props.theme.CTA};
   font-size: 1.8rem;
   color: #fff;
   border: none;
@@ -89,7 +95,7 @@ const FormButton = styled.button`
   transition: all ease 0.3s;
   :hover {
     cursor: pointer;
-    background: ${props => props.theme.secondaryLight};
+    background: ${props => props.theme.CTAHover};
     box-shadow: ${props => props.theme.bsHover};
     transform: translateY(0.5rem);
   }
@@ -97,13 +103,16 @@ const FormButton = styled.button`
 
 const ContactForm = () => (
   <FormWrapper>
-    <FormHeading>Ready to get started? Have questions or concerns?</FormHeading>
-    <form
+    <HeadingStyleLight>Request an appointment</HeadingStyleLight>
+    <SubHeadingStyleLight>
+      Online marketing can be stressful, we are here to help. Tell us your
+      questions and concerns and we will guide you in the right direction.
+    </SubHeadingStyleLight>
+    <FormStyle
       name="contact"
       method="POST"
       data-netlify="true"
       action="/success"
-      netlify-honeypot="bot-field"
     >
       <FormGroup>
         <label htmlFor="name">Full Name</label>
@@ -111,7 +120,7 @@ const ContactForm = () => (
           type="text"
           name="name"
           id="name"
-          placeholder="Full Name"
+          placeholder="John Doe"
           required
         />
       </FormGroup>
@@ -121,7 +130,7 @@ const ContactForm = () => (
           type="email"
           name="email"
           id="email"
-          placeholder="Email"
+          placeholder="johndoe@gmail.com"
           required
         />
       </FormGroup>
@@ -131,18 +140,22 @@ const ContactForm = () => (
           type="text"
           name="business"
           id="business"
-          placeholder="Business Name"
+          placeholder="John Doe Chiropractic"
         />
       </FormGroup>
       <FormGroup>
-        <label htmlFor="choice">Marketing Option</label>
+        <label htmlFor="choice">Package Option Interested In</label>
         <select name="choice" id="choice">
-          <option value="standard">Standard Marketing</option>
-          <option value="premium">Premium Marketing + Website</option>
+          <option value="basicSEO">Basic SEO</option>
+          <option value="standardSEO">Standard SEO</option>
+          <option value="premiumSEO">Premium SEO</option>
+          <option value="basicSite">Basic Website</option>
+          <option value="standardSite">Standard Website</option>
+          <option value="premiumSite">Premium Website</option>
         </select>
       </FormGroup>
       <FormGroup>
-        <label htmlFor="message">Message</label>
+        <label htmlFor="message">Questions or Concerns</label>
         <textarea
           name="message"
           id="message"
@@ -152,7 +165,7 @@ const ContactForm = () => (
         />
       </FormGroup>
       <FormButton type="submit">Submit</FormButton>
-    </form>
+    </FormStyle>
   </FormWrapper>
 )
 

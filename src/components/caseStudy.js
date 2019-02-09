@@ -9,7 +9,7 @@ import {
   SubHeadingStyle,
 } from './styles/TextStyles'
 
-export const CASE_STUDY_QUERY = graphql`
+const CASE_STUDY_QUERY = graphql`
   query CaseStudyQuery {
     file(relativePath: { eq: "case-study.jpg" }) {
       childImageSharp {
