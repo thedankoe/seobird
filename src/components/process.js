@@ -68,7 +68,7 @@ const Process = () => (
           Step 1
           <span>
             A package is purchased, you will get an email receipt and be
-            redirected to fill out a form with your information. If your
+            redirected to fill out a form with your information. If you
             purchased a website or the premium package, you will be emailed a
             contract to sign.
           </span>

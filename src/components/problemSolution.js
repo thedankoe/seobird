@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Link } from 'gatsby'
 import { device } from './styles/MediaQueries'
 import {
   HeadingStyle,

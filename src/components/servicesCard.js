@@ -60,7 +60,7 @@ const ServicesCard = () => (
         Affordable SEO consulting for businesses that want to test if SEO will
         work for them.
       </SubHeadingStyle>
-      <CardParagraph>$349/month</CardParagraph>
+      <CardParagraph>$299/month</CardParagraph>
       <ParagraphStyle>
         Month to Month - <span>Done With You</span>
       </ParagraphStyle>
@@ -75,15 +75,11 @@ const ServicesCard = () => (
         </li>
         <li>
           <CheckMark />
-          Social Media Posts 3x/week
+          Social Media Strategy
         </li>
         <li>
           <CheckMark />
-          Monthly Content Writing
-        </li>
-        <li>
-          <CheckMark />
-          Copywriting Advice
+          Content Writing Guidelines
         </li>
         <li>
           <CheckMark />

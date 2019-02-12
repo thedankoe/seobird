@@ -6,12 +6,16 @@ import {
   SubHeadingStyle,
   ParagraphStyle,
   ProblemLink,
+  ColoredLink,
 } from '../components/styles/TextStyles'
 import Layout from '../components/layout'
 import { device } from '../components/styles/MediaQueries'
 import Buy from '../components/buy'
-import ServicesSection from '../components/servicesSection'
-import { RightIcon } from '../components/styles/IconStyles'
+import ServicesSection, {
+  ServicesSubHeading,
+  ServicesParagraph,
+} from '../components/servicesSection'
+import { RightIcon, SocialIcon } from '../components/styles/IconStyles'
 
 export const MarketingPageHeading = styled(HeadingStyle)`
   width: ${props => props.theme.maxWidth};
@@ -55,6 +59,33 @@ export const MarketingPageParagraph = styled(ParagraphStyle)`
   width: ${props => props.theme.maxWidth};
   margin: 0 auto ${props => props.theme.textSpace} auto;
   text-align: center;
+`
+
+const EmailMarketing = styled.div`
+  background: linear-gradient(
+    to right bottom,
+    ${props => props.theme.secondaryLight},
+    ${props => props.theme.secondary}
+  );
+  width: ${props => props.theme.maxWidth};
+  margin: 0 auto;
+  padding: 2rem;
+  border-radius: 4px;
+  text-align: center;
+`
+
+const EmailSubHeading = styled(SubHeadingStyle)`
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  svg {
+    margin-right: 1rem;
+  }
+`
+
+const EmailParagraph = styled(ServicesParagraph)`
+  color: #fff;
 `
 
 const MarketingEnd = styled.h4`
@@ -106,6 +137,23 @@ const MarketingSolutionsPage = ({ location }) => (
         We provide the following services&#58;
       </MarketingPageParagraph>
       <ServicesSection />
+      <EmailMarketing>
+        <EmailSubHeading>
+          <SocialIcon /> Email Marketing
+        </EmailSubHeading>
+        <EmailParagraph>
+          This is a given, nearly every person is on some form of social media.
+          Imagine having the opportunity to pass by the eyes of many customers
+          in your area, this is what a well targeted post does.
+        </EmailParagraph>
+        <EmailParagraph>
+          Most businesses have social media accounts, but they lack well
+          designed posts and engagement.
+        </EmailParagraph>
+        <ProblemLink to="/">
+          Learn more about email marketing as a standalone service
+        </ProblemLink>
+      </EmailMarketing>
       <MarketingEnd>
         Scenario &#35;1&#58; You Already Have a Website
       </MarketingEnd>

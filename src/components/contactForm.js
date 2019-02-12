@@ -1,10 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import {
-  HeadingStyleLight,
-  SubHeadingStyleLight,
-  ParagraphStyleLight,
-} from './styles/TextStyles'
+import { HeadingStyleLight, SubHeadingStyleLight } from './styles/TextStyles'
 import { device } from './styles/MediaQueries'
 
 const FormWrapper = styled.div`
@@ -111,9 +107,11 @@ const ContactForm = () => (
     <FormStyle
       name="contact"
       method="POST"
-      data-netlify="true"
       action="/success"
+      data-netlify="true"
+      data-netlify-honeypot="bot-field"
     >
+      <input type="hidden" name="bot-field" />
       <FormGroup>
         <label htmlFor="name">Full Name</label>
         <input
