@@ -13,6 +13,11 @@ import { RightIcon } from '../components/styles/IconStyles'
 import Layout from '../components/layout'
 import { device } from '../components/styles/MediaQueries'
 import Team from '../components/team'
+import FBGroup from '../components/fbGroup'
+
+const AboutUltraSub = styled(UltraSubHeadingStyle)`
+  margin-bottom: ${props => props.theme.textSpace};
+`
 
 const AboutHeadingContainer = styled.div`
   text-align: center;
@@ -125,17 +130,21 @@ const AboutPage = ({ location }) => (
               customers.
             </em>
           </SubHeadingStyle>
-          <UltraSubHeadingStyle>
+          <AboutUltraSub>
             Let your website, your best salesman, do the work for you.
-          </UltraSubHeadingStyle>
+          </AboutUltraSub>
+          <ProblemLink to="/services">
+            Here's more detail on our services
+            <RightIcon />
+          </ProblemLink>
         </AboutHeadingContainer>
         <AboutContainer>
           <AboutPageHeading>Experience in the modern market</AboutPageHeading>
           <AboutParagraph>
-            Our team is comprised of young, tech-centric individuals that have a
-            passion for learning. We love when new technology surfaces because
+            Our team is comprised of tech-centric individuals that have a
+            passion for creating. We love when new technology surfaces because
             that means we can better help YOU. We use the most efficient
-            software/languages to achieve your business goals.
+            software/languages/strategies to achieve your business goals.
           </AboutParagraph>
         </AboutContainer>
       </AboutWrapper>
@@ -165,11 +174,7 @@ const AboutPage = ({ location }) => (
           </AboutParagraph>
         </AboutContainer>
       </AboutWrapper>
-      <ProblemLink to="/services">
-        Here's more detail on our services
-        <RightIcon />
-      </ProblemLink>
-      <Team />
+      <FBGroup />
     </Layout>
   </>
 )

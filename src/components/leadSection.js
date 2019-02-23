@@ -4,6 +4,7 @@ import {
   HeadingStyle,
   SubHeadingStyle,
   ParagraphStyle,
+  ColoredLink,
 } from './styles/TextStyles'
 import { device } from './styles/MediaQueries'
 
@@ -53,19 +54,19 @@ const LeadSection = () => (
         <ParagraphStyle>
           Marketing and SEO are heavily neglected in the modern market. Some
           leads come naturally from the technology that already exists, but
-          targeted content is by far the best way to consitently increase the
-          amount of leads coming in.
+          targeted content is by far the best way (next to{' '}
+          <ColoredLink to="/">email marketing</ColoredLink>) to consitently
+          increase the amount of leads/customers coming in.
         </ParagraphStyle>
       </LeadSectionItem>
       <LeadSectionItem>
-        <SubHeadingStyle>
-          3x web traffic increase for the first year
-        </SubHeadingStyle>
+        <SubHeadingStyle>Everything leads back to your website</SubHeadingStyle>
         <ParagraphStyle>
-          Online advertisements put your content in front of users who have
-          already expressed interest in buying! These alone offer a huge
-          opportunity to get specific visitors to your website, thus increasing
-          the amount of consistent customers (a lot being large companies).
+          Why is it not more accepted that every piece of your business should
+          be trying to lead a customer to your website in order to make a sale?
+          This includes social media, SEO, email marketing, and most other
+          online marketing strategies. Optimize them all and customers will be
+          flowing in.
         </ParagraphStyle>
       </LeadSectionItem>
     </LeadSectionContainer>

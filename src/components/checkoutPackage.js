@@ -3,7 +3,7 @@ import { CheckoutButton } from './styles/TextStyles'
 
 const CheckoutPackage = class extends React.Component {
   componentDidMount() {
-    this.stripe = window.Stripe('pk_test_fQH2dQRYolaDCqg57vKo3gMX', {
+    this.stripe = window.Stripe('pk_test_p3OHsINOUkTaOhrx6uoohOLo', {
       betas: ['checkout_beta_4'],
     })
   }

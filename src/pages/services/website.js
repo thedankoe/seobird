@@ -66,39 +66,39 @@ const WebsitePage = ({ location }) => (
       <ServicesWrapper>
         <div>
           <ServicesSubHeading>Strategized for your business</ServicesSubHeading>
-          <ServicesParagraph>
+          <ParagraphStyle>
             From the starting sketch to the last line of code, our websites are
             built with your business in mind. Without a strategy for both user
             interface and experience a website will flop. Too many people skip
             this crucial step.
-          </ServicesParagraph>
+          </ParagraphStyle>
         </div>
         <div>
           <ServicesSubHeading>Custom functionality</ServicesSubHeading>
-          <ServicesParagraph>
+          <ParagraphStyle>
             If your business needs online order forms, done. A fancy animated
             photo gallery? No problem. SEOBird puts the right functionality in
             the right place, making it irresistable for companies to buy from
             you.
-          </ServicesParagraph>
+          </ParagraphStyle>
         </div>
         <div>
           <ServicesSubHeading>Affordable</ServicesSubHeading>
-          <ServicesParagraph>
+          <ParagraphStyle>
             We understand that businesses love affordable monthly payments
             rather than a lump sum. You are always able to buy out of the
             contract but as long as the contract is active we update the website
             as much as you desire.
-          </ServicesParagraph>
+          </ParagraphStyle>
         </div>
         <div>
           <ServicesSubHeading>Optimized</ServicesSubHeading>
-          <ServicesParagraph>
+          <ParagraphStyle>
             Search engines are always crawling for the latest and most optimized
             content. Outdated sites will not get as many customers as modern
             sites. On-page SEO, mobile responsive, and well designed/developed
             websites are our specialty.
-          </ServicesParagraph>
+          </ParagraphStyle>
         </div>
       </ServicesWrapper>
       <WebsiteBuyWrapper>

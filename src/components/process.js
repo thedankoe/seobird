@@ -54,11 +54,11 @@ const ProcessListIcon = styled(PencilIcon)`
 const Process = () => (
   <ProcessWrapper>
     <HeadingStyle>Our process</HeadingStyle>
-    <SubHeadingStyle>
+    <ParagraphStyle>
       Our team is comprised of experts in all of the services explained above,
       once a package or individual service is purchased we get to work right
       away. The sooner we get started the faster your growth starts.
-    </SubHeadingStyle>
+    </ParagraphStyle>
     <ProcessList>
       <ProcessListContainer>
         <div>
@@ -67,10 +67,9 @@ const Process = () => (
         <ProcessListItem>
           Step 1
           <span>
-            A package is purchased, you will get an email receipt and be
-            redirected to fill out a form with your information. If you
-            purchased a website or the premium package, you will be emailed a
-            contract to sign.
+            A package is purchased, you will be redirected to a form to give us
+            all of the information regarding your business. You will be emailed
+            a receipt and contract to sign within 48 hours.
           </span>
         </ProcessListItem>
       </ProcessListContainer>
@@ -108,8 +107,8 @@ const Process = () => (
           Step 4
           <span>
             We produce content articles to ensure organic growth, create landing
-            pages to collect emails, and start adjusting our strategy according
-            to reported analytics.
+            pages for promotions and email collection. We then start adjusting
+            our strategy according to reported analytics.
           </span>
         </ProcessListItem>
       </ProcessListContainer>
@@ -120,8 +119,8 @@ const Process = () => (
         <ProcessListItem>
           Step 5
           <span>
-            Fine-tune and repeat, we send our plan of action along with a
-            monthly ROI report to you.
+            Fine tune and repeat, we send and monthly ROI reports and checklists
+            to you. Best results are noticed near the 6 month mark.
           </span>
         </ProcessListItem>
       </ProcessListContainer>

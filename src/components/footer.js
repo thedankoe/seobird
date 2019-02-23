@@ -84,7 +84,7 @@ const Footer = () => (
             <Link to="/services">Services</Link>
           </FooterNavItem>
           <FooterNavItem>
-            <Link to="/pricing">Pricing</Link>
+            <Link to="/faq">FAQ</Link>
           </FooterNavItem>
           <FooterNavItem>
             <Link to="/about">About</Link>

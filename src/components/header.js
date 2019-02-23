@@ -100,7 +100,7 @@ function DynamicHeaderText({ location }) {
     return (
       <HeaderText>
         <HeaderHeadingHome>
-          Streamlined web services for local businesses
+          Package based web services for local businesses
           <HeaderSubHeading>
             With the most affordable SEO consulting on the market
           </HeaderSubHeading>

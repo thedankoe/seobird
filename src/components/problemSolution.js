@@ -38,10 +38,11 @@ const ProbContainerBlue = styled.div`
   margin: 0 auto;
 `
 
-const ParagraphOrange = styled(ParagraphStyle)`
+export const ParagraphSecondary = styled(ParagraphStyle)`
   margin-top: ${props => props.theme.textSpace};
   color: ${props => props.theme.secondary};
   font-weight: 500;
+  text-align: center;
 `
 
 const ParagraphBlue = styled(ParagraphStyle)`
@@ -82,55 +83,53 @@ const ProblemSolution = () => (
   <>
     <ProblemWrapper>
       <ProblemContainer>
-        <HeadingStyle>Put a spotlight on your best salesman</HeadingStyle>
+        <HeadingStyle>You don't have enough time</HeadingStyle>
         <ParagraphStyle>
-          Who's your best salesman? Your website! There are an unrighteous
-          amount of business owners that neglect their website, this is a major
-          issue when it comes to expanding your business and getting new
-          customers.
+          Expensive SEO agencies guide you through a painful process to start
+          working on SEO. The reason for hiring them in the first place is to
+          save time and not have to learn it yourself, right?
         </ParagraphStyle>
-        <ParagraphOrange>
-          The market is extremely competitive. Without targeted content, it's
-          like your website isn't even there.
-        </ParagraphOrange>
+        <ParagraphSecondary>
+          What if their SEO strategy isn't the best for your business? Then it's
+          time to cancel and move on to the next glorified service to grow you
+          business. The cycle continues.
+        </ParagraphSecondary>
       </ProblemContainer>
     </ProblemWrapper>
     <WrapperBlue>
       <ProbContainerBlue>
         <HeadingStyleLight>
-          People aren't finding your business
+          Most marketing strategies are inefficient
         </HeadingStyleLight>
         <ParagraphBlue>
-          Believe it or not, there are more customers out there looking for your
-          business. Frankly it isn't up to them to find it. It's up to you.
-          Online marketing is not a cost but an investment. What happens when:
+          Long drawn out sign up processes are unnecessary. With a package based
+          system, SEO and online marketing can still be tailored to your
+          business. Here's what it would look like:
         </ParagraphBlue>
         <ProblemList>
           <ProblemListItem>
             <CheckMark />
-            <span>Your site doesn't show up</span>
+            <span>Services that result in the most growth are prioritized</span>
           </ProblemListItem>
           <ProblemListItem>
             <CheckMark />
-            <span>
-              They find your website but click away after a 3 second load time
-            </span>
+            <span>Services that don't work are refactored and tested</span>
           </ProblemListItem>
           <ProblemListItem>
             <CheckMark />
-            <span>Your social media accounts don't display what they want</span>
+            <span>No time is wasted with constant emails</span>
           </ProblemListItem>
           <ProblemListItem>
             <CheckMark />
-            <span>Your ads don't even show up for them</span>
+            <span>The sign up process is streamlined and affordable</span>
           </ProblemListItem>
           <ProblemListItem>
             <CheckMark />
-            <span>Your competitor just sent them a discount code</span>
+            <span>You can always request appointments and phone calls</span>
           </ProblemListItem>
         </ProblemList>
-        <ProblemLink to="/services/website">
-          In the market for a website?
+        <ProblemLink to="/services/services">
+          Convinced already? Here's our services
           <RightIcon />
         </ProblemLink>
       </ProbContainerBlue>

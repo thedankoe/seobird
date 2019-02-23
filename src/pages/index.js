@@ -6,6 +6,7 @@ import ProblemSolution from '../components/problemSolution'
 import Process from '../components/process'
 import Buy from '../components/buy'
 import Team from '../components/team'
+import FBGroup from '../components/fbGroup'
 
 const IndexPage = ({ location }) => (
   <>
@@ -23,7 +24,7 @@ const IndexPage = ({ location }) => (
       <ProblemSolution />
       <Process />
       <Buy />
-      <Team />
+      <FBGroup />
     </Layout>
   </>
 )

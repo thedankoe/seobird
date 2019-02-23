@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { HeadingStyleLight, SubHeadingStyleLight } from './styles/TextStyles'
 import { device } from './styles/MediaQueries'
+import SelectBox from './selectBox'
 
 const FormWrapper = styled.div`
   width: 100%;
@@ -40,6 +41,7 @@ const FormGroup = styled.div`
     padding: 1.5rem 1rem;
     background: rgba(0, 0, 0, 0.4);
     border: none;
+    border-radius: 3px;
     color: #fff;
     font-family: Raleway, sans-serif;
     font-size: 1.8rem;
@@ -57,20 +59,6 @@ const FormGroup = styled.div`
     }
     ::placeholder {
       font-family: Roboto, sans-serif;
-      font-size: 1.8rem;
-      color: ${props => props.theme.lightGrey};
-    }
-  }
-  select {
-    padding: 1.5rem 1rem;
-    background: rgba(0, 0, 0, 0.2);
-    border: none;
-    font-family: Raleway, sans-serif;
-    font-size: 1.8rem;
-    color: ${props => props.theme.lightGrey};
-    option {
-      background: rgba(0, 0, 0, 0.2);
-      font-family: Raleway, sans-serif;
       font-size: 1.8rem;
       color: ${props => props.theme.lightGrey};
     }
@@ -141,17 +129,15 @@ const ContactForm = () => (
           placeholder="John Doe Chiropractic"
         />
       </FormGroup>
-      <FormGroup>
-        <label htmlFor="choice">Package Option Interested In</label>
-        <select name="choice" id="choice">
-          <option value="basicSEO">Basic SEO</option>
-          <option value="standardSEO">Standard SEO</option>
-          <option value="premiumSEO">Premium SEO</option>
-          <option value="basicSite">Basic Website</option>
-          <option value="standardSite">Standard Website</option>
-          <option value="premiumSite">Premium Website</option>
-        </select>
-      </FormGroup>
+      <SelectBox
+        items={[
+          { value: 'Standard SEO', id: 1 },
+          { value: 'Premium SEO', id: 2 },
+          { value: 'Standard Website', id: 3 },
+          { value: 'Premium Website', id: 4 },
+          { value: 'Custom Package', id: 5 },
+        ]}
+      />
       <FormGroup>
         <label htmlFor="message">Questions or Concerns</label>
         <textarea

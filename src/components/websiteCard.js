@@ -10,7 +10,7 @@ import {
 } from './styles/TextStyles'
 
 const CardContainer = styled.div`
-  margin: ${props => props.theme.textSpace} 0;
+  margin-bottom: ${props => props.theme.textSpace};
   display: flex;
   justify-content: center;
 `
@@ -31,6 +31,11 @@ const CardParagraph = styled.p`
   color: ${props => props.theme.primary};
   font-size: 2.8rem;
   font-weight: 500;
+  span {
+    color: ${props => props.theme.primaryLight};
+    font-size: 2.2rem;
+    font-weight: 400;
+  }
 `
 
 const CardList = styled.ul`
@@ -41,32 +46,34 @@ const CardList = styled.ul`
   font-size: 2rem;
   font-weight: 400;
   svg {
-    margin-right: 2rem;
+    margin-right: 1rem;
     font-size: 3rem;
   }
   li {
     display: flex;
+    justify-content: center;
     align-items: center;
-    text-align: left;
     :not(:last-child) {
       margin-bottom: 2rem;
     }
   }
 `
 
-export const CardLink = styled(HeaderLinkStyle)`
+const CardLink = styled(HeaderLinkStyle)`
   margin: 0 auto;
 `
 
-const ServicesCard = () => (
+const WebsiteCard = () => (
   <CardContainer>
     <Card>
-      <HeadingStyle>Standard</HeadingStyle>
+      <HeadingStyle>Basic</HeadingStyle>
       <SubHeadingStyle>
-        Affordable SEO consulting for businesses that want to test if SEO will
-        work for them.
+        A single page website or landing page for businesses that don't have
+        one.
       </SubHeadingStyle>
-      <CardParagraph>$399/month</CardParagraph>
+      <CardParagraph>
+        $299/month <span>plus tax</span>
+      </CardParagraph>
       <ParagraphStyle>
         Month to Month - <span>Done With You</span>
       </ParagraphStyle>
@@ -81,7 +88,7 @@ const ServicesCard = () => (
           <div>
             <CheckMark />
           </div>
-          A descriptive monthly checklist with prioritized actions and how to
+          A descriptive weekly checklist with prioritized actions and how to
           implement them
         </li>
         <li>
@@ -106,17 +113,18 @@ const ServicesCard = () => (
           purchasing
         </li>
       </CardList>
-      <CardLink to="/services/standard">Learn More</CardLink>
+      <CardLink to="/services/basic">Learn More</CardLink>
     </Card>
     <Card>
-      <HeadingStyle>Premium</HeadingStyle>
+      <HeadingStyle>Standard</HeadingStyle>
       <SubHeadingStyle>
-        For businesses that are tight on time that want the most return on
-        investment.
+        For businesses that are tight on time and understand the need for SEO.
       </SubHeadingStyle>
-      <CardParagraph>$999/month</CardParagraph>
+      <CardParagraph>
+        $599/month <span>plus tax</span>
+      </CardParagraph>
       <ParagraphStyle>
-        6 month contract - <span>Done For You</span>
+        Month to Month - <span>Done For You</span>
       </ParagraphStyle>
       <CardList>
         <li>
@@ -135,8 +143,57 @@ const ServicesCard = () => (
           <div>
             <CheckMark />
           </div>
-          Weekly content writing, daily social media posts (priority platforms),
-          and copywriting for all pages included
+          Bi-weekly content writing, daily Facebook posts, and copywriting for
+          all pages included
+        </li>
+        <li>
+          <div>
+            <CheckMark />
+          </div>
+          A monthly strategy and ROI report describing how we plan to continue
+          growth
+        </li>
+        <li>
+          <div>
+            <CheckMark />
+          </div>
+          Email marketing can be added on at anytime, this is an option when
+          purchasing
+        </li>
+      </CardList>
+      <CardLink to="/services/standard">Learn More</CardLink>
+    </Card>
+    <Card>
+      <HeadingStyle>Premium</HeadingStyle>
+      <SubHeadingStyle>
+        For businesses that are tight on time that want the most return on
+        investment.
+      </SubHeadingStyle>
+      <CardParagraph>
+        $899/month <span>plus tax</span>
+      </CardParagraph>
+      <ParagraphStyle>
+        Month to Month - <span>Done For You</span>
+      </ParagraphStyle>
+      <CardList>
+        <li>
+          <div>
+            <CheckMark />
+          </div>
+          Problems that will most increase growth when fixed are prioritized
+        </li>
+        <li>
+          <div>
+            <CheckMark />
+          </div>
+          We do the work for you, you sit back and enjoy your online growth
+        </li>
+        <li>
+          <div>
+            <CheckMark />
+          </div>
+          Weekly content writing, daily social media posts (all platforms), and
+          copywriting for all pages included
         </li>
         <li>
           <div>
@@ -158,4 +215,4 @@ const ServicesCard = () => (
   </CardContainer>
 )
 
-export default ServicesCard
+export default WebsiteCard

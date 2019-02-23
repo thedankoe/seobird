@@ -75,6 +75,13 @@ export const PackageBuyPara = styled(ParagraphStyle)`
   font-size: 2.8rem;
 `
 
+export const PackageBuyParaEnd = styled(ParagraphStyle)`
+  margin-top: 1.5rem;
+  color: #fff;
+  font-size: 2.4rem;
+  font-weight: 500;
+`
+
 export const PackageBuyCTA = styled.div`
   width: 100%;
   height: 100%;
@@ -93,20 +100,20 @@ const StandardPage = ({ location }) => (
     </Helmet>
     <Layout location={location}>
       <PackageWrapper>
-        <HeadingStyle>All of your SEO needs done for you</HeadingStyle>
+        <HeadingStyle>The perfect SEO starter pack</HeadingStyle>
         <SubHeadingStyle>
-          Our standard SEO package will get your business more customers.
-          Consistently creating content, sending email campaigns, and optimizing
-          all areas of your website will result in long term growth.
+          Our standard SEO consulting package lets businesses try out SEO and
+          online marketing. There will be noticeable differences in the early
+          stages but SEO shows its best results after 6 months.
         </SubHeadingStyle>
         <PackageContainer>
           <div>
             <SubHeadingStyle>Prioritize your online presence</SubHeadingStyle>
             <ParagraphStyle>
               With the standard SEO package, we send you a monthly gameplan with
-              a prioritized checklist of what we plan to accomplish that month.
-              All you have to do is sit back and watch your online presence
-              expand. At the end of each month we send a monthly ROI report
+              a prioritized checklist of actionable advice that will most
+              benefit your business. Our checklist is detailed and easy to
+              implement. At the end of each month we send a monthly ROI report
               showing our successes and our strategy for the coming months.
             </ParagraphStyle>
           </div>
@@ -122,7 +129,6 @@ const StandardPage = ({ location }) => (
           </div>
         </PackageContainer>
         <PackageBuyWrapper>
-          <HeadingStyle>Start your growth</HeadingStyle>
           <PackageBuyCard>
             <PackageBuyList>
               <PackageBuyPara>Services Included</PackageBuyPara>
@@ -132,27 +138,27 @@ const StandardPage = ({ location }) => (
               </li>
               <li>
                 <CheckMark />
-                Weekly Email Campaigns
+                Monthly Website Analysis &amp; Actionable Advice
               </li>
               <li>
                 <CheckMark />
-                Daily (weekday) Social Media Posts/Engagement
+                Social Media Strategy
               </li>
               <li>
                 <CheckMark />
-                Weekly Content Writing
+                Content Writing Guidelines
               </li>
               <li>
                 <CheckMark />
-                Copywriting for All Pages
-              </li>
-              <li>
-                <CheckMark />
-                Facebook Advertisements
+                Monthly SEO Strategy
               </li>
               <li>
                 <CheckMark />
                 Monthly ROI Report
+              </li>
+              <li>
+                <CheckMark />
+                Can Add on Email Marketing at Any Time
               </li>
             </PackageBuyList>
             <PackageBuyCTA>
@@ -160,15 +166,20 @@ const StandardPage = ({ location }) => (
                 Customers want to find your business, let your website find{' '}
                 <em>them</em>.
               </SubHeadingStyleLight>
-              <CheckoutPackage plan="plan_EJVLrIPaulZOtP" />
+              <CheckoutPackage plan="plan_EZFX0pCmg8LOVB" />
+              <PackageBuyParaEnd>
+                If you are interested in email marketing, you will be given the
+                option when checking out.
+              </PackageBuyParaEnd>
             </PackageBuyCTA>
           </PackageBuyCard>
           <PackageBuyContainer>
             <div>
               <ParagraphStyle>
-                This is a recurring monthly bill, you can cancel at anytime by
-                emailing us. Do keep in mind that SEO shows its best results
-                with 6 or more months of work.
+                This is a recurring monthly bill, you can cancel at anytime by{' '}
+                <ColoredLink to="/contact">emailing us</ColoredLink>. Do keep in
+                mind that SEO shows its best results with 6 or more months of
+                work.
               </ParagraphStyle>
               <FAQParagraph>
                 After your purchase you will be redirected to a form to give us

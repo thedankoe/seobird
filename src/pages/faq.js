@@ -8,6 +8,7 @@ import {
   ParagraphStyle,
   ColoredLink,
 } from '../components/styles/TextStyles'
+import WebsiteFAQ from '../components/websiteFAQ'
 
 const FAQWrapper = styled.div`
   margin: ${props => props.theme.sectionSpace} 0;
@@ -45,15 +46,15 @@ const FAQPage = ({ location }) => (
               Is there a contract for packages?
             </UltraSubHeadingStyle>
             <ParagraphStyle>
-              The basic and standard SEO packages are month-to-month, no
-              contract involved. One of these packages gives business owners the
-              freedom to try out SEO and see if they benefit from it (we know
-              you will).
+              All of our website and SEO packages have contracts. For our month
+              to month package, the contract is there to lay out and agree to
+              the work we are providing you. You can cancel this package at any
+              time.
             </ParagraphStyle>
             <FAQParagraph>
               The premium package and website creation packages are all 6 month
-              contracts. Once a package is purchased you will be redirected to
-              fill out a survey and sign the contract.
+              contracts. Once a package is purchased you will receive an email
+              within 48 hours to electronically read and sign the contract.
             </FAQParagraph>
           </div>
           <div>
@@ -72,8 +73,8 @@ const FAQPage = ({ location }) => (
             </ParagraphStyle>
             <FAQParagraph>
               Depending on what your businesses needs are, we offer packages for
-              single page websites, multi-page site, and functional sites
-              tailored to your businesses needs.
+              single page websites, landing pages, and complete functional
+              websites tailored to your business.
             </FAQParagraph>
           </div>
           <div>
@@ -109,21 +110,19 @@ const FAQPage = ({ location }) => (
             </FAQParagraph>
           </div>
           <div>
-            <UltraSubHeadingStyle>Do you do PPC ads?</UltraSubHeadingStyle>
+            <UltraSubHeadingStyle>Do you offer PPC ads?</UltraSubHeadingStyle>
             <ParagraphStyle>
               Google Ads and other PPC ads can be a rabbit hole for local
-              businesses. Usually it isn't worth the money for what you are
-              getting in return. We focus on Facebook advertisements with those
-              who buy our premium package. Facebook returns much more for local
-              businesses.
+              businesses. With that, you may{' '}
+              <ColoredLink to="/contact">contact us</ColoredLink> if you feel it
+              would be right for you. We usually offer Facebook Ads after a
+              package is purchased if we feel like your business would benefit
+              from them.
             </ParagraphStyle>
             <FAQParagraph>
-              If you are interested is online advertisements, take a look at our
-              services that we offer in our{' '}
-              <ColoredLink to="/services/premium">
-                premium SEO package
-              </ColoredLink>
-              .
+              Online advertisements can be great at times but extremely risky at
+              others, we offer them down the road if your business will get
+              value from them.
             </FAQParagraph>
           </div>
           <div>
@@ -145,6 +144,7 @@ const FAQPage = ({ location }) => (
           </div>
         </FAQContainer>
       </FAQWrapper>
+      <WebsiteFAQ />
     </Layout>
   </>
 )

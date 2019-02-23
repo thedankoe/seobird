@@ -18,6 +18,7 @@ import {
   PackageBuyList,
   PackageBuyPara,
   PackageBuyCTA,
+  PackageBuyParaEnd,
 } from './standard'
 import { FAQParagraph } from '../faq'
 import { CheckMark } from '../../components/styles/IconStyles'
@@ -73,27 +74,27 @@ const StandardPage = ({ location }) => (
               </li>
               <li>
                 <CheckMark />
-                Weekly Email Campaigns
+                Monthly Website Analysis &amp; Actionable Advice
               </li>
               <li>
                 <CheckMark />
-                Daily (weekday) Social Media Posts/Engagement
+                Social Media Strategy
               </li>
               <li>
                 <CheckMark />
-                Weekly Content Writing
+                Content Writing Guidelines
               </li>
               <li>
                 <CheckMark />
-                Copywriting for All Pages
-              </li>
-              <li>
-                <CheckMark />
-                Facebook Advertisements
+                Monthly SEO Strategy
               </li>
               <li>
                 <CheckMark />
                 Monthly ROI Report
+              </li>
+              <li>
+                <CheckMark />
+                Can Add on Email Marketing at Any Time
               </li>
             </PackageBuyList>
             <PackageBuyCTA>
@@ -101,15 +102,20 @@ const StandardPage = ({ location }) => (
                 Customers want to find your business, let your website find{' '}
                 <em>them</em>.
               </SubHeadingStyleLight>
-              <CheckoutPackage plan="plan_EJVLrIPaulZOtP" />
+              {/* <CheckoutPackage plan="plan_EJVLrIPaulZOtP" /> */}
+              <PackageBuyParaEnd>
+                If you are interested in email marketing, you will be given the
+                option when checking out.
+              </PackageBuyParaEnd>
             </PackageBuyCTA>
           </PackageBuyCard>
           <PackageBuyContainer>
             <div>
               <ParagraphStyle>
-                This is a recurring monthly bill, you can cancel at anytime by
-                emailing us. Do keep in mind that SEO shows its best results
-                with 6 or more months of work.
+                This is a recurring monthly bill, you can cancel at anytime by{' '}
+                <ColoredLink to="/contact">emailing us</ColoredLink>. Do keep in
+                mind that SEO shows its best results with 6 or more months of
+                work.
               </ParagraphStyle>
               <FAQParagraph>
                 After your purchase you will be redirected to a form to give us

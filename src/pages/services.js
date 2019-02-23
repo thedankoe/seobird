@@ -6,16 +6,13 @@ import {
   SubHeadingStyle,
   ParagraphStyle,
   ProblemLink,
-  ColoredLink,
 } from '../components/styles/TextStyles'
 import Layout from '../components/layout'
 import { device } from '../components/styles/MediaQueries'
 import Buy from '../components/buy'
-import ServicesSection, {
-  ServicesSubHeading,
-  ServicesParagraph,
-} from '../components/servicesSection'
-import { RightIcon, SocialIcon } from '../components/styles/IconStyles'
+import ServicesSection from '../components/servicesSection'
+import { EmailIcon } from '../components/styles/IconStyles'
+import FBGroup from '../components/fbGroup'
 
 export const MarketingPageHeading = styled(HeadingStyle)`
   width: ${props => props.theme.maxWidth};
@@ -61,16 +58,19 @@ export const MarketingPageParagraph = styled(ParagraphStyle)`
   text-align: center;
 `
 
-const EmailMarketing = styled.div`
+const EmailMarketingWrapper = styled.div`
+  width: 100%;
   background: linear-gradient(
     to right bottom,
     ${props => props.theme.secondaryLight},
     ${props => props.theme.secondary}
   );
+`
+
+const EmailMarketingContainer = styled.div`
   width: ${props => props.theme.maxWidth};
   margin: 0 auto;
   padding: 2rem;
-  border-radius: 4px;
   text-align: center;
 `
 
@@ -84,30 +84,15 @@ const EmailSubHeading = styled(SubHeadingStyle)`
   }
 `
 
-const EmailParagraph = styled(ServicesParagraph)`
+const EmailParagraph = styled(ParagraphStyle)`
+  margin-bottom: 1.5rem;
   color: #fff;
 `
 
-const MarketingEnd = styled.h4`
+const BestServiceWrapper = styled.div`
   width: ${props => props.theme.maxWidth};
-  margin: ${props => props.theme.textSpace} auto 0 auto;
+  margin: ${props => props.theme.sectionSpace} auto;
   text-align: center;
-  font-size: 2.2rem;
-  color: ${props => props.theme.secondary};
-`
-
-const MarketingEndParagraph = styled(ParagraphStyle)`
-  width: 50%;
-  margin: 0.5rem auto ${props => props.theme.textSpace} auto;
-  text-align: center;
-
-  @media ${device.tablet} {
-    width: 90%;
-  }
-`
-
-const ServicesWebsiteLink = styled(ProblemLink)`
-  margin-bottom: ${props => props.theme.sectionSpace};
 `
 
 const MarketingSolutionsPage = ({ location }) => (
@@ -137,53 +122,41 @@ const MarketingSolutionsPage = ({ location }) => (
         We provide the following services&#58;
       </MarketingPageParagraph>
       <ServicesSection />
-      <EmailMarketing>
-        <EmailSubHeading>
-          <SocialIcon /> Email Marketing
-        </EmailSubHeading>
-        <EmailParagraph>
-          This is a given, nearly every person is on some form of social media.
-          Imagine having the opportunity to pass by the eyes of many customers
-          in your area, this is what a well targeted post does.
-        </EmailParagraph>
-        <EmailParagraph>
-          Most businesses have social media accounts, but they lack well
-          designed posts and engagement.
-        </EmailParagraph>
-        <ProblemLink to="/">
-          Learn more about email marketing as a standalone service
-        </ProblemLink>
-      </EmailMarketing>
-      <MarketingEnd>
-        Scenario &#35;1&#58; You Already Have a Website
-      </MarketingEnd>
-      <MarketingEndParagraph>
-        If you already have a website, was it created by an individual/company
-        that creates websites just for good looks? Or does it actually get you
-        leads/conversions?
-      </MarketingEndParagraph>
-      <MarketingEndParagraph>
-        Does it embody the essence of marketing or target the needs of the
-        customer? Does it fulfill your business objective of getting consistent
-        customers?
-      </MarketingEndParagraph>
-      <MarketingEnd>
-        Scenario &#35;2&#58; You Don't Have a Website Yet
-      </MarketingEnd>
-      <MarketingEndParagraph>
-        If you don't currently have a website, it's extremely important to have
-        one in this competitive market. You could be missing a HUGE customer
-        base.
-      </MarketingEndParagraph>
-      <MarketingEndParagraph>
-        All credible print companies have effective websites that showcase their
-        amazing products and it results in more customers and higher profits.
-      </MarketingEndParagraph>
-      <ServicesWebsiteLink to="/services/website">
-        In the market for a website?
-        <RightIcon />
-      </ServicesWebsiteLink>
+      <EmailMarketingWrapper>
+        <EmailMarketingContainer>
+          <EmailSubHeading>
+            <EmailIcon /> Email Marketing
+          </EmailSubHeading>
+          <EmailParagraph>
+            Email Marketing is a golden nugget for businesses small and large.
+            With the right persuasive copy and send rate, this alone could bring
+            your business to new heights (and it plays very nicely with SEO
+            work).
+          </EmailParagraph>
+          <EmailParagraph>
+            Have us manage your email marketing campaigns, with or without the
+            purchase of an SEO package.
+          </EmailParagraph>
+          <ProblemLink to="/">
+            Email marketing as a standalone service
+          </ProblemLink>
+        </EmailMarketingContainer>
+      </EmailMarketingWrapper>
+      <BestServiceWrapper>
+        <HeadingStyle>The right service for you</HeadingStyle>
+        <SubHeadingStyle>
+          We do not include specific services in each package, we build a
+          strategy tailored to your business and complete tasks that will result
+          in the most growth.
+        </SubHeadingStyle>
+        <ParagraphStyle>
+          Cookie cutter SEO work should not exist. businesses understand that
+          they are each unique, they have different audiences, different mediums
+          for traffic, and need to be treated as such.
+        </ParagraphStyle>
+      </BestServiceWrapper>
       <Buy location={location} />
+      <FBGroup />
     </Layout>
   </>
 )

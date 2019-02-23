@@ -11,7 +11,7 @@ import {
 
 const CASE_STUDY_QUERY = graphql`
   query CaseStudyQuery {
-    file(relativePath: { eq: "case-study.jpg" }) {
+    file(relativePath: { eq: "local-seo-case-study.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 1000) {
           ...GatsbyImageSharpFluid
@@ -31,6 +31,11 @@ const CaseContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: ${props => props.theme.textSpace};
+`
+
+const CaseImage = styled(Img)`
+  box-shadow: ${props => props.theme.bs};
+  border-radius: 5px;
 `
 
 const ParagraphContainer = styled.div`
@@ -57,22 +62,22 @@ const CaseStudy = () => (
     query={CASE_STUDY_QUERY}
     render={data => (
       <CaseWrapper>
-        <HeadingStyle>Replica Printing case study</HeadingStyle>
+        <HeadingStyle>Local SEO HGB Construction case study</HeadingStyle>
         <CaseContainer>
-          <Img fluid={data.file.childImageSharp.fluid} />
+          <CaseImage fluid={data.file.childImageSharp.fluid} />
           <ParagraphContainer>
-            <SubHeadingStyle>Marketing Goals</SubHeadingStyle>
+            <SubHeadingStyle>Services Provided</SubHeadingStyle>
             <CaseList>
-              <li>Profitability with PPC Advertising</li>
-              <li>Develop a marketing action plan for future growth</li>
-              <li>Understand successes and failures of past efforts</li>
-              <li>Enter new marketing channels with established branding</li>
+              <li>Website creation</li>
+              <li>Mobile optimization</li>
+              <li>SEO citation building</li>
+              <li>Content writing</li>
             </CaseList>
             <CaseParagraph>
-              Replica's results were outstanding. 16 to 1 revenue with PPC ads,
-              250% conversion increase, and a drastic increase in website
-              impressions. Other important areas such as email open and
-              click-through rates went up by over 100%.
+              HGB's ranking boosted to number 1 for multiple keywords, they were
+              able to grow from one to four employees in under one year. With
+              tailored SEO services that were projected to work, there wasn't a
+              need for expensive consulting or unnecessary services.
             </CaseParagraph>
           </ParagraphContainer>
         </CaseContainer>

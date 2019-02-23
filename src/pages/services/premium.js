@@ -38,89 +38,28 @@ const PremiumPage = ({ location }) => (
         <HeadingStyle>The ultimate growth bundle</HeadingStyle>
         <SubHeadingStyle>
           Our premium SEO package will put your business on the fast track to
-          reaching new customers. With a 6 month contract, you are guarenteed
-          incredible results.
+          reaching new customers. With weekly content and email campaigns
+          included, growth is guarenteed.
         </SubHeadingStyle>
         <PackageContainer>
           <div>
-            <SubHeadingStyle>Advanced SEO and Keyword Research</SubHeadingStyle>
+            <SubHeadingStyle>Prioritize your online presence</SubHeadingStyle>
             <ParagraphStyle>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-              Exercitationem, quae! Placeat necessitatibus, rerum in molestiae
-              dolores commodi iste. Iure id debitis omnis beatae harum
-              temporibus ducimus iusto atque ipsa repellat.
+              With the premium SEO package, we send you a monthly gameplan with
+              a prioritized checklist of what we plan to accomplish that month.
+              All you have to do is sit back and watch your online presence
+              expand. At the end of each month we send a monthly ROI report
+              showing our successes and our strategy for the coming months.
             </ParagraphStyle>
           </div>
           <div>
-            <SubHeadingStyle>Google Ads Management</SubHeadingStyle>
+            <SubHeadingStyle>Focus more on whats working</SubHeadingStyle>
             <ParagraphStyle>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-              Exercitationem, quae! Placeat necessitatibus, rerum in molestiae
-              dolores commodi iste. Iure id debitis omnis beatae harum
-              temporibus ducimus iusto atque ipsa repellat.
-            </ParagraphStyle>
-          </div>
-          <div>
-            <SubHeadingStyle>Online ad management</SubHeadingStyle>
-            <ParagraphStyle>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-              Exercitationem, quae! Placeat necessitatibus, rerum in molestiae
-              dolores commodi iste. Iure id debitis omnis beatae harum
-              temporibus ducimus iusto atque ipsa repellat.
-            </ParagraphStyle>
-          </div>
-          <div>
-            <SubHeadingStyle>Website changes</SubHeadingStyle>
-            <ParagraphStyle>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-              Exercitationem, quae! Placeat necessitatibus, rerum in molestiae
-              dolores commodi iste. Iure id debitis omnis beatae harum
-              temporibus ducimus iusto atque ipsa repellat.
-            </ParagraphStyle>
-          </div>
-          <div>
-            <SubHeadingStyle>Ongoing website support</SubHeadingStyle>
-            <ParagraphStyle>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-              Exercitationem, quae! Placeat necessitatibus, rerum in molestiae
-              dolores commodi iste. Iure id debitis omnis beatae harum
-              temporibus ducimus iusto atque ipsa repellat.
-            </ParagraphStyle>
-          </div>
-          <div>
-            <SubHeadingStyle>Social media posts</SubHeadingStyle>
-            <ParagraphStyle>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-              Exercitationem, quae! Placeat necessitatibus, rerum in molestiae
-              dolores commodi iste. Iure id debitis omnis beatae harum
-              temporibus ducimus iusto atque ipsa repellat.
-            </ParagraphStyle>
-          </div>
-          <div>
-            <SubHeadingStyle>Content writing</SubHeadingStyle>
-            <ParagraphStyle>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-              Exercitationem, quae! Placeat necessitatibus, rerum in molestiae
-              dolores commodi iste. Iure id debitis omnis beatae harum
-              temporibus ducimus iusto atque ipsa repellat.
-            </ParagraphStyle>
-          </div>
-          <div>
-            <SubHeadingStyle>Advanced copywriting</SubHeadingStyle>
-            <ParagraphStyle>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-              Exercitationem, quae! Placeat necessitatibus, rerum in molestiae
-              dolores commodi iste. Iure id debitis omnis beatae harum
-              temporibus ducimus iusto atque ipsa repellat.
-            </ParagraphStyle>
-          </div>
-          <div>
-            <SubHeadingStyle>Monthly ROI report</SubHeadingStyle>
-            <ParagraphStyle>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-              Exercitationem, quae! Placeat necessitatibus, rerum in molestiae
-              dolores commodi iste. Iure id debitis omnis beatae harum
-              temporibus ducimus iusto atque ipsa repellat.
+              Every business has different needs, everyone knows this. Some SEO
+              tactics won't work at times even when they are expected to work,
+              freelancers and agencies that don't admit this should not be
+              trusted. We focus on whats working and refactor what isn't, this
+              results in long term growth.
             </ParagraphStyle>
           </div>
         </PackageContainer>
@@ -135,11 +74,11 @@ const PremiumPage = ({ location }) => (
               </li>
               <li>
                 <CheckMark />
-                Weekly Email Campaigns
+                Website Optimization
               </li>
               <li>
                 <CheckMark />
-                Daily (weekday) Social Media Posts/Engagement
+                Daily (weekday) Social Media Posts
               </li>
               <li>
                 <CheckMark />
@@ -151,11 +90,11 @@ const PremiumPage = ({ location }) => (
               </li>
               <li>
                 <CheckMark />
-                Facebook Advertisements
+                Monthly ROI Report
               </li>
               <li>
                 <CheckMark />
-                Monthly ROI Report
+                Weekly Email Campaigns
               </li>
             </PackageBuyList>
             <PackageBuyCTA>
@@ -163,15 +102,16 @@ const PremiumPage = ({ location }) => (
                 Customers want to find your business, let your website find{' '}
                 <em>them</em>.
               </SubHeadingStyleLight>
-              <CheckoutPackage plan="plan_EJVLrIPaulZOtP" />
+              {/* <CheckoutPackage plan="plan_EJVLrIPaulZOtP" /> */}
             </PackageBuyCTA>
           </PackageBuyCard>
           <PackageBuyContainer>
             <div>
               <ParagraphStyle>
-                This is a recurring monthly bill, you can cancel at anytime
-                after the 6 month contract ends. Do keep in mind that SEO shows
-                its best results with 6 or more months of work.
+                This is a recurring monthly bill, you can cancel at anytime by{' '}
+                <ColoredLink to="/contact">emailing us</ColoredLink>. Do keep in
+                mind that SEO shows its best results with 6 or more months of
+                work.
               </ParagraphStyle>
               <FAQParagraph>
                 After your purchase you will be redirected to a form to give us
@@ -186,10 +126,6 @@ const PremiumPage = ({ location }) => (
                 <ColoredLink to="/">Terms</ColoredLink> and have read our{' '}
                 <ColoredLink to="/">Privacy Policy</ColoredLink>.
               </ParagraphStyle>
-              <FAQParagraph>
-                Your contract will be sent to your email within 24 hours of the
-                form submission for you to sign.
-              </FAQParagraph>
             </div>
           </PackageBuyContainer>
         </PackageBuyWrapper>
