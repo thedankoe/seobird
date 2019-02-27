@@ -71,9 +71,11 @@ const NavToggleContainer = styled.nav`
 `
 
 const NavToggle = styled.button`
+  position: relative;
   margin-left: auto;
   margin-right: ${props => props.theme.textSpace};
   background: none;
+  z-index: 4;
   border: none;
   display: flex;
   align-items: center;
@@ -83,9 +85,12 @@ const NavToggle = styled.button`
 `
 
 const NavToggleList = styled.ul`
+  position: absolute;
+  top: 0;
   width: 100%;
   margin: 0;
-  padding: 3rem;
+  padding: 8rem 0 3rem 0;
+  background: ${props => props.theme.primary};
   list-style: none;
   display: flex;
   flex-direction: column;
@@ -97,7 +102,6 @@ const NavToggleItem = styled.li`
   font-size: 1.8rem;
   font-weight: 500;
   color: #fff;
-  background: ${props => props.theme.primary};
   border-radius: 3px;
   :not(:last-child) {
     margin-bottom: 1rem;
@@ -177,7 +181,7 @@ class Nav extends Component {
         ) : (
           <NavToggleContainer>
             <Logo to="/">
-              PrintWeb<span>Marketing</span>
+              <LogoImg src={NavLogo} alt="SEOBird logo" />
             </Logo>
             <Toggle>
               {({ on, toggle }) => (

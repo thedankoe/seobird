@@ -12,6 +12,10 @@ const LeadSectionWrapper = styled.div`
   width: ${props => props.theme.maxWidth};
   margin: ${props => props.theme.sectionSpace} auto;
 
+  @media ${device.desktop} {
+    width: 80%;
+  }
+
   @media ${device.laptopL} {
     width: 95%;
   }
@@ -21,6 +25,18 @@ const LeadSectionContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: ${props => props.theme.textSpace};
+
+  @media ${device.tabletL} {
+    width: 80%;
+    margin: 0 auto;
+    grid-template-columns: 1fr;
+  }
+
+  @media ${device.tablet} {
+    width: 95%;
+    margin: 0 auto;
+    grid-template-columns: 1fr;
+  }
 `
 
 const LeadSectionItem = styled.div`
@@ -35,8 +51,12 @@ const LeadSectionItem = styled.div`
     }
   }
 
-  @media ${device.tabletS} {
+  @media ${device.tabletL} {
     text-align: center;
+  }
+
+  @media ${device.tabletS} {
+    text-align: left;
   }
 `
 
@@ -55,8 +75,10 @@ const LeadSection = () => (
           Marketing and SEO are heavily neglected in the modern market. Some
           leads come naturally from the technology that already exists, but
           targeted content is by far the best way (next to{' '}
-          <ColoredLink to="/">email marketing</ColoredLink>) to consitently
-          increase the amount of leads/customers coming in.
+          <ColoredLink to="/services/email-marketing">
+            email marketing
+          </ColoredLink>
+          ) to consitently increase the amount of leads/customers coming in.
         </ParagraphStyle>
       </LeadSectionItem>
       <LeadSectionItem>

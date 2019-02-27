@@ -97,7 +97,7 @@ const Footer = () => (
           </FooterNavItem>
         </FooterNavList>
       </nav>
-      <ParagraphStyle>&copy; 2018 SEOBird</ParagraphStyle>
+      <ParagraphStyle>&copy; 2019 SEOBird</ParagraphStyle>
     </FooterContainer>
   </FooterWrapper>
 )

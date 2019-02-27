@@ -21,7 +21,7 @@ const BlogPageHeading = styled(HeadingStyle)`
 const BlogPage = ({ location }) => (
   <>
     <Helmet
-      title="Blog | SEOBird"
+      title="Growth Tips for Local Businesses | Affordable SEO Consulting"
       meta={[
         { name: 'description', content: 'Sample' },
         { name: 'keywords', content: 'sample, something' },
@@ -29,7 +29,7 @@ const BlogPage = ({ location }) => (
     >
       <html lang="en" />
     </Helmet>
-    <Layout location={location}>
+    <Layout location={location} headerText="Growth Tips">
       <BlogPageHeading>Expert advice on growing your business</BlogPageHeading>
       <GrowthTipsBlog />
     </Layout>

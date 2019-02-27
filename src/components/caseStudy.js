@@ -24,6 +24,14 @@ const CASE_STUDY_QUERY = graphql`
 const CaseWrapper = styled.div`
   width: ${props => props.theme.maxWidth};
   margin: ${props => props.theme.sectionSpace} auto;
+
+  @media ${device.desktop} {
+    width: 80%;
+  }
+
+  @media ${device.laptop} {
+    width: 90%;
+  }
 `
 
 const CaseContainer = styled.div`
@@ -31,6 +39,10 @@ const CaseContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: ${props => props.theme.textSpace};
+
+  @media ${device.tablet} {
+    grid-template-columns: 1fr;
+  }
 `
 
 const CaseImage = styled(Img)`
@@ -42,6 +54,10 @@ const ParagraphContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+
+  @media ${device.tablet} {
+    text-align: center;
+  }
 `
 
 const CaseList = styled.ul`

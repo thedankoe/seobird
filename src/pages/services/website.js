@@ -17,7 +17,6 @@ import {
 import {
   ServicesWrapper,
   ServicesSubHeading,
-  ServicesParagraph,
 } from '../../components/servicesSection'
 import {
   PackageBuyWrapper,
@@ -33,12 +32,20 @@ import { FAQParagraph } from '../faq'
 
 const WebsiteBuyWrapper = styled(PackageBuyWrapper)`
   width: ${props => props.theme.maxWidth};
+
+  @media ${device.desktop} {
+    width: 80%;
+  }
+
+  @media ${device.laptopL} {
+    width: 95%;
+  }
 `
 
 const WebsitePage = ({ location }) => (
   <>
     <Helmet
-      title="Website Creation | SEOBird"
+      title="Website Creation | Single and Multi-Page Websites for Local Businesses"
       meta={[
         { name: 'description', content: 'Sample' },
         { name: 'keywords', content: 'sample, something' },
@@ -46,7 +53,7 @@ const WebsitePage = ({ location }) => (
     >
       <html lang="en" />
     </Helmet>
-    <Layout location={location}>
+    <Layout location={location} headerText="Website Creation">
       <MarketingPageHeading>
         Conversion centered websites do the work for you
       </MarketingPageHeading>
@@ -143,32 +150,6 @@ const WebsitePage = ({ location }) => (
             <CheckoutPackage plan="plan_EJVLrIPaulZOtP" />
           </PackageBuyCTA>
         </PackageBuyCard>
-        <PackageBuyContainer>
-          <div>
-            <ParagraphStyle>
-              This is a recurring monthly bill, you can cancel at anytime. Do
-              keep in mind that SEO shows its best results with 6 or more months
-              of work.
-            </ParagraphStyle>
-            <FAQParagraph>
-              After your purchase you will be redirected to a form to give us
-              more information on your company. This form will help us better
-              understand your needs and allow us to strategize SEO for your
-              business.
-            </FAQParagraph>
-          </div>
-          <div>
-            <ParagraphStyle>
-              By purchasing this package you agree to our{' '}
-              <ColoredLink to="/">Terms</ColoredLink> and have read our{' '}
-              <ColoredLink to="/">Privacy Policy</ColoredLink>.
-            </ParagraphStyle>
-            <FAQParagraph>
-              Your contract will be sent to your email within 24 hours of the
-              form submission for you to sign.
-            </FAQParagraph>
-          </div>
-        </PackageBuyContainer>
       </WebsiteBuyWrapper>
     </Layout>
   </>

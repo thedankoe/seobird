@@ -6,13 +6,13 @@ import {
   HeadingStyle,
   SubHeadingStyle,
   ParagraphStyle,
-  ColoredLink,
   SubHeadingStyleLight,
+  CheckoutLink,
 } from '../../components/styles/TextStyles'
-import CheckoutPackage from '../../components/checkoutPackage'
-import { FAQParagraph } from '../faq'
 import { CheckMark } from '../../components/styles/IconStyles'
 import PackageBG from '../../images/package-buy-bg.jpg'
+import BillingInfo from '../../components/billingInfo'
+import { device } from '../../components/styles/MediaQueries'
 
 export const PackageWrapper = styled.div`
   position: relative;
@@ -20,6 +20,14 @@ export const PackageWrapper = styled.div`
   margin: 0 auto;
   padding: ${props => props.theme.sectionSpace} 0;
   text-align: center;
+
+  @media ${device.desktop} {
+    width: 80%;
+  }
+
+  @media ${device.laptopL} {
+    width: 95%;
+  }
 `
 
 export const PackageContainer = styled.div`
@@ -28,6 +36,10 @@ export const PackageContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: ${props => props.theme.textSpace};
+
+  @media ${device.tabletL} {
+    grid-template-columns: 1fr;
+  }
 `
 
 export const PackageBuyWrapper = styled.div`
@@ -57,6 +69,11 @@ export const PackageBuyCard = styled.div`
   display: grid;
   grid-template-columns: 1.5fr 1fr;
   grid-gap: ${props => props.theme.textSpace};
+
+  @media ${device.tabletL} {
+    padding: 1rem;
+    grid-template-columns: 1fr;
+  }
 `
 
 export const PackageBuyList = styled.ul`
@@ -90,7 +107,7 @@ export const PackageBuyCTA = styled.div`
 const StandardPage = ({ location }) => (
   <>
     <Helmet
-      title="Standard Package | SEOBird"
+      title="Standard SEO Consulting Package | Affordable Online Consulting for Local Businesses"
       meta={[
         { name: 'description', content: 'Sample' },
         { name: 'keywords', content: 'sample, something' },
@@ -98,7 +115,7 @@ const StandardPage = ({ location }) => (
     >
       <html lang="en" />
     </Helmet>
-    <Layout location={location}>
+    <Layout location={location} headerText="Standard Package">
       <PackageWrapper>
         <HeadingStyle>The perfect SEO starter pack</HeadingStyle>
         <SubHeadingStyle>
@@ -138,7 +155,7 @@ const StandardPage = ({ location }) => (
               </li>
               <li>
                 <CheckMark />
-                Monthly Website Analysis &amp; Actionable Advice
+                Website Analysis &amp; Actionable Advice
               </li>
               <li>
                 <CheckMark />
@@ -166,37 +183,17 @@ const StandardPage = ({ location }) => (
                 Customers want to find your business, let your website find{' '}
                 <em>them</em>.
               </SubHeadingStyleLight>
-              <CheckoutPackage plan="plan_EZFX0pCmg8LOVB" />
+              <CheckoutLink to="/services/standard-checkout">
+                Continue to Checkout
+              </CheckoutLink>
               <PackageBuyParaEnd>
                 If you are interested in email marketing, you will be given the
                 option when checking out.
               </PackageBuyParaEnd>
             </PackageBuyCTA>
           </PackageBuyCard>
-          <PackageBuyContainer>
-            <div>
-              <ParagraphStyle>
-                This is a recurring monthly bill, you can cancel at anytime by{' '}
-                <ColoredLink to="/contact">emailing us</ColoredLink>. Do keep in
-                mind that SEO shows its best results with 6 or more months of
-                work.
-              </ParagraphStyle>
-              <FAQParagraph>
-                After your purchase you will be redirected to a form to give us
-                more information on your company. This form will help us better
-                understand your needs and allow us to strategize SEO for your
-                business.
-              </FAQParagraph>
-            </div>
-            <div>
-              <ParagraphStyle>
-                By purchasing this package you agree to our{' '}
-                <ColoredLink to="/">Terms</ColoredLink> and have read our{' '}
-                <ColoredLink to="/">Privacy Policy</ColoredLink>.
-              </ParagraphStyle>
-            </div>
-          </PackageBuyContainer>
         </PackageBuyWrapper>
+        <BillingInfo />
       </PackageWrapper>
     </Layout>
   </>

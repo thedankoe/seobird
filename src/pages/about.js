@@ -111,7 +111,7 @@ const AboutContainer = styled.div`
 const AboutPage = ({ location }) => (
   <>
     <Helmet
-      title="About Us | SEOBird"
+      title="Your Marketing Team | Affordable SEO for Local Businesses"
       meta={[
         { name: 'description', content: 'Sample' },
         { name: 'keywords', content: 'sample, something' },
@@ -119,7 +119,7 @@ const AboutPage = ({ location }) => (
     >
       <html lang="en" />
     </Helmet>
-    <Layout location={location}>
+    <Layout location={location} headerText="Your Marketing Team">
       <AboutWrapper>
         <AboutHeadingContainer>
           <HeadingStyle>We know what your business needs to grow</HeadingStyle>

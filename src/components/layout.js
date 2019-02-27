@@ -67,11 +67,11 @@ const GlobalStyle = createGlobalStyle`
   }
 `
 
-const Layout = ({ children, location }) => (
+const Layout = ({ children, location, headerText }) => (
   <ThemeProvider theme={theme}>
     <>
       <GlobalStyle />
-      <Header location={location} />
+      <Header location={location} headerText={headerText} />
       <main>{children}</main>
       <Footer />
     </>

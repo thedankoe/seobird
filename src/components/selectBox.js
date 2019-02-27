@@ -1,6 +1,9 @@
+/* eslint react/destructuring-assignment: 0 */
+/* eslint jsx-a11y/label-has-associated-control: 0 */
+/* eslint jsx-a11y/label-has-for: 0 */
+/* eslint jsx-a11y/click-events-have-key-events: 0 */
 import React, { Component } from 'react'
 import styled from 'styled-components'
-import './styles/selectBox.css'
 import { DownIcon, UpIcon } from './styles/IconStyles'
 
 const SelectWrapper = styled.div`
@@ -43,6 +46,9 @@ const SelectItems = styled.div`
       background: ${props => props.theme.lightGrey};
       color: ${props => props.theme.secondary};
     }
+    :focus {
+      outline: 1px solid ${props => props.theme.success};
+    }
   }
 `
 
@@ -56,14 +62,17 @@ const SelectArrow = styled.div`
 export default class SelectBox extends Component {
   state = {
     items: this.props.items || [],
+    selectedItem: this.props.items[0] || this.props.selectedItem,
     showItems: false,
-    selectedItem: this.props.items && this.props.items[0],
   }
 
+  componentDidUpdate() {}
+
   dropDown = () => {
-    this.setState(prevState => ({
-      showItems: !prevState.showItems,
-    }))
+    const { showItems } = this.state
+    this.setState({
+      showItems: !showItems,
+    })
   }
 
   selectItem = item => {
@@ -77,7 +86,13 @@ export default class SelectBox extends Component {
     const { items, showItems, selectedItem } = this.state
     return (
       <SelectWrapper>
-        <label htmlFor="choice">Package Option Interested In</label>
+        <label htmlFor="choice">Service Interested In</label>
+        <input
+          type="hidden"
+          value={selectedItem.value}
+          name="choice"
+          id="choice"
+        />
         <SelectContainer onClick={this.dropDown}>
           <SelectItemSelected>{selectedItem.value}</SelectItemSelected>
           <SelectArrow>{showItems ? <UpIcon /> : <DownIcon />}</SelectArrow>
@@ -88,7 +103,6 @@ export default class SelectBox extends Component {
                 tabIndex="0"
                 key={item.id}
                 onClick={() => this.selectItem(item)}
-                className={selectedItem === item ? 'selected' : ''}
               >
                 {item.value}
               </div>

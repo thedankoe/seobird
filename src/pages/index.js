@@ -5,13 +5,12 @@ import CaseStudy from '../components/caseStudy'
 import ProblemSolution from '../components/problemSolution'
 import Process from '../components/process'
 import Buy from '../components/buy'
-import Team from '../components/team'
 import FBGroup from '../components/fbGroup'
 
 const IndexPage = ({ location }) => (
   <>
     <Helmet
-      title="Home | SEOBird"
+      title="SEO Consulting and Website Creation for Local Businesses"
       meta={[
         { name: 'description', content: 'Sample' },
         { name: 'keywords', content: 'sample, something' },

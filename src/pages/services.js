@@ -11,7 +11,7 @@ import Layout from '../components/layout'
 import { device } from '../components/styles/MediaQueries'
 import Buy from '../components/buy'
 import ServicesSection from '../components/servicesSection'
-import { EmailIcon } from '../components/styles/IconStyles'
+import { EmailIcon, RightIcon } from '../components/styles/IconStyles'
 import FBGroup from '../components/fbGroup'
 
 export const MarketingPageHeading = styled(HeadingStyle)`
@@ -56,10 +56,19 @@ export const MarketingPageParagraph = styled(ParagraphStyle)`
   width: ${props => props.theme.maxWidth};
   margin: 0 auto ${props => props.theme.textSpace} auto;
   text-align: center;
+
+  @media ${device.desktop} {
+    width: 80%;
+  }
+
+  @media ${device.laptopL} {
+    width: 95%;
+  }
 `
 
 const EmailMarketingWrapper = styled.div`
   width: 100%;
+  padding: ${props => props.theme.textSpace} 0;
   background: linear-gradient(
     to right bottom,
     ${props => props.theme.secondaryLight},
@@ -71,7 +80,17 @@ const EmailMarketingContainer = styled.div`
   width: ${props => props.theme.maxWidth};
   margin: 0 auto;
   padding: 2rem;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 5px;
   text-align: center;
+
+  @media ${device.desktop} {
+    width: 80%;
+  }
+
+  @media ${device.laptopL} {
+    width: 95%;
+  }
 `
 
 const EmailSubHeading = styled(SubHeadingStyle)`
@@ -93,12 +112,20 @@ const BestServiceWrapper = styled.div`
   width: ${props => props.theme.maxWidth};
   margin: ${props => props.theme.sectionSpace} auto;
   text-align: center;
+
+  @media ${device.desktop} {
+    width: 80%;
+  }
+
+  @media ${device.laptopL} {
+    width: 95%;
+  }
 `
 
 const MarketingSolutionsPage = ({ location }) => (
   <>
     <Helmet
-      title="Marketing Solutions | SEOBird"
+      title="Marketing Solutions for Local Businesses at an Affordable Price"
       meta={[
         { name: 'description', content: 'Sample' },
         { name: 'keywords', content: 'sample, something' },
@@ -106,7 +133,7 @@ const MarketingSolutionsPage = ({ location }) => (
     >
       <html lang="en" />
     </Helmet>
-    <Layout location={location}>
+    <Layout location={location} headerText="Marketing Solutions">
       <MarketingPageHeading>
         Online marketing solutions for local businesses
       </MarketingPageHeading>
@@ -128,17 +155,13 @@ const MarketingSolutionsPage = ({ location }) => (
             <EmailIcon /> Email Marketing
           </EmailSubHeading>
           <EmailParagraph>
-            Email Marketing is a golden nugget for businesses small and large.
-            With the right persuasive copy and send rate, this alone could bring
-            your business to new heights (and it plays very nicely with SEO
-            work).
+            The golden nugget for all businesses. Stay in weekly contact with
+            your current and future customers. Have us manage your email
+            marketing campaigns, with or without the purchase of an SEO package.
           </EmailParagraph>
-          <EmailParagraph>
-            Have us manage your email marketing campaigns, with or without the
-            purchase of an SEO package.
-          </EmailParagraph>
-          <ProblemLink to="/">
+          <ProblemLink to="/services/email-marketing">
             Email marketing as a standalone service
+            <RightIcon />
           </ProblemLink>
         </EmailMarketingContainer>
       </EmailMarketingWrapper>

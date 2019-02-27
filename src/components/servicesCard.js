@@ -9,14 +9,19 @@ import {
   HeaderLinkStyle,
 } from './styles/TextStyles'
 
-const CardContainer = styled.div`
+export const CardContainer = styled.div`
   margin: ${props => props.theme.textSpace} 0;
   display: flex;
   justify-content: center;
+
+  @media ${device.laptop} {
+    flex-direction: column;
+    align-items: center;
+  }
 `
 
-const Card = styled.div`
-  width: 33%;
+export const Card = styled.div`
+  width: 50%;
   background: #fff;
   padding: ${props => props.theme.textSpace} 1.5rem;
   border-radius: 3px;
@@ -25,15 +30,31 @@ const Card = styled.div`
   :not(:last-child) {
     margin-right: ${props => props.theme.textSpace};
   }
+
+  @media ${device.laptop} {
+    width: 70%;
+    :not(:last-child) {
+      margin-right: 0;
+      margin-bottom: ${props => props.theme.textSpace};
+    }
+  }
+
+  @media ${device.tablet} {
+    width: 90%;
+  }
+
+  @media ${device.tabletS} {
+    width: 100%;
+  }
 `
 
-const CardParagraph = styled.p`
+export const CardParagraph = styled.p`
   color: ${props => props.theme.primary};
   font-size: 2.8rem;
   font-weight: 500;
 `
 
-const CardList = styled.ul`
+export const CardList = styled.ul`
   width: 80%;
   margin: ${props => props.theme.textSpace} auto;
   border-radius: 3px;
@@ -51,6 +72,10 @@ const CardList = styled.ul`
     :not(:last-child) {
       margin-bottom: 2rem;
     }
+  }
+
+  @media ${device.tabletS} {
+    width: 95%;
   }
 `
 

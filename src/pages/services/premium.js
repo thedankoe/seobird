@@ -18,6 +18,8 @@ import {
   PackageBuyList,
   PackageBuyPara,
   PackageBuyCTA,
+  PackageBilling,
+  PackageBuyParaEnd,
 } from './standard'
 import { FAQParagraph } from '../faq'
 import { CheckMark } from '../../components/styles/IconStyles'
@@ -25,7 +27,7 @@ import { CheckMark } from '../../components/styles/IconStyles'
 const PremiumPage = ({ location }) => (
   <>
     <Helmet
-      title="Premium Package | SEOBird"
+      title="Premium SEO Package | Affordable SEO for Local Businesses"
       meta={[
         { name: 'description', content: 'Sample' },
         { name: 'keywords', content: 'sample, something' },
@@ -33,7 +35,7 @@ const PremiumPage = ({ location }) => (
     >
       <html lang="en" />
     </Helmet>
-    <Layout location={location}>
+    <Layout location={location} headerText="Premium Package">
       <PackageWrapper>
         <HeadingStyle>The ultimate growth bundle</HeadingStyle>
         <SubHeadingStyle>
@@ -102,32 +104,12 @@ const PremiumPage = ({ location }) => (
                 Customers want to find your business, let your website find{' '}
                 <em>them</em>.
               </SubHeadingStyleLight>
-              {/* <CheckoutPackage plan="plan_EJVLrIPaulZOtP" /> */}
+              <CheckoutPackage plan="plan_EaGGbHfckB3loj" />
+              <PackageBuyParaEnd>
+                Secure payment through Stripe
+              </PackageBuyParaEnd>
             </PackageBuyCTA>
           </PackageBuyCard>
-          <PackageBuyContainer>
-            <div>
-              <ParagraphStyle>
-                This is a recurring monthly bill, you can cancel at anytime by{' '}
-                <ColoredLink to="/contact">emailing us</ColoredLink>. Do keep in
-                mind that SEO shows its best results with 6 or more months of
-                work.
-              </ParagraphStyle>
-              <FAQParagraph>
-                After your purchase you will be redirected to a form to give us
-                more information on your company. This form will help us better
-                understand your needs and allow us to strategize SEO for your
-                business.
-              </FAQParagraph>
-            </div>
-            <div>
-              <ParagraphStyle>
-                By purchasing this package you agree to our{' '}
-                <ColoredLink to="/">Terms</ColoredLink> and have read our{' '}
-                <ColoredLink to="/">Privacy Policy</ColoredLink>.
-              </ParagraphStyle>
-            </div>
-          </PackageBuyContainer>
         </PackageBuyWrapper>
       </PackageWrapper>
     </Layout>

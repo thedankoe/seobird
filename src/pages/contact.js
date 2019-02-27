@@ -20,7 +20,7 @@ const ContactWrapper = styled.div`
 const ContactPage = ({ location }) => (
   <>
     <Helmet
-      title="Contact | SEOBird"
+      title="Contact Us"
       meta={[
         { name: 'description', content: 'Sample' },
         { name: 'keywords', content: 'sample, something' },
@@ -28,7 +28,7 @@ const ContactPage = ({ location }) => (
     >
       <html lang="en" />
     </Helmet>
-    <Layout location={location}>
+    <Layout location={location} headerText="Contact Us">
       <ContactWrapper>
         <ContactForm />
       </ContactWrapper>

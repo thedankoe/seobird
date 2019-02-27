@@ -9,6 +9,7 @@ import {
   ColoredLink,
 } from '../components/styles/TextStyles'
 import WebsiteFAQ from '../components/websiteFAQ'
+import { device } from '../components/styles/MediaQueries'
 
 const FAQWrapper = styled.div`
   margin: ${props => props.theme.sectionSpace} 0;
@@ -20,6 +21,18 @@ const FAQContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: ${props => props.theme.textSpace};
+
+  @media ${device.desktop} {
+    width: 80%;
+  }
+
+  @media ${device.laptopL} {
+    width: 95%;
+  }
+
+  @media ${device.tablet} {
+    grid-template-columns: 1fr;
+  }
 `
 
 export const FAQParagraph = styled(ParagraphStyle)`
@@ -29,7 +42,7 @@ export const FAQParagraph = styled(ParagraphStyle)`
 const FAQPage = ({ location }) => (
   <>
     <Helmet
-      title="FAQ | SEOBird"
+      title="FAQ for Online SEO Consulting and Website Creation"
       meta={[
         { name: 'description', content: 'Sample' },
         { name: 'keywords', content: 'sample, something' },
@@ -37,7 +50,7 @@ const FAQPage = ({ location }) => (
     >
       <html lang="en" />
     </Helmet>
-    <Layout location={location}>
+    <Layout location={location} headerText="Frequently Asked Questions">
       <FAQWrapper>
         <HeadingStyle>All of your questions answered</HeadingStyle>
         <FAQContainer>

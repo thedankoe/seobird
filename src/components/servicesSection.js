@@ -19,11 +19,25 @@ export const ServicesWrapper = styled.div`
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: ${props => props.theme.textSpace};
 
+  @media ${device.desktopL} {
+    grid-template-columns: 1fr 1fr;
+  }
+
   @media ${device.desktop} {
     width: 80%;
   }
 
+  @media ${device.laptopL} {
+    width: 95%;
+  }
+
   @media ${device.tablet} {
+    width: 60%;
+    grid-template-columns: 1fr;
+  }
+
+  @media ${device.tabletS} {
+    width: 80%;
     grid-template-columns: 1fr;
   }
 `

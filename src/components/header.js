@@ -48,8 +48,8 @@ const HeaderHeadingHome = styled.h1`
   }
 
   @media ${device.tabletS} {
-    width: 50rem;
-    text-align: center;
+    width: 47rem;
+    font-size: 3.2rem;
   }
 `
 
@@ -90,110 +90,12 @@ const HeaderSubHeading = styled.span`
   }
 
   @media ${device.tabletS} {
-    width: 50rem;
-    text-align: center;
+    width: 47rem;
+    font-size: 2.2rem;
   }
 `
 
-function DynamicHeaderText({ location }) {
-  if (location.pathname === '/') {
-    return (
-      <HeaderText>
-        <HeaderHeadingHome>
-          Package based web services for local businesses
-          <HeaderSubHeading>
-            With the most affordable SEO consulting on the market
-          </HeaderSubHeading>
-        </HeaderHeadingHome>
-        <HeaderLinkStyle to="/services">
-          Start Now
-          <DownIcon />
-        </HeaderLinkStyle>
-      </HeaderText>
-    )
-  }
-  if (location.pathname === '/services') {
-    return (
-      <HeaderText>
-        <HeaderHeading>Marketing Solutions</HeaderHeading>
-      </HeaderText>
-    )
-  }
-
-  if (location.pathname === '/blog') {
-    return (
-      <HeaderText>
-        <HeaderHeading>Growth Tips</HeaderHeading>
-      </HeaderText>
-    )
-  }
-
-  if (location.pathname === '/faq') {
-    return (
-      <HeaderText>
-        <HeaderHeading>Frequently Asked Questions</HeaderHeading>
-      </HeaderText>
-    )
-  }
-
-  if (location.pathname === '/about') {
-    return (
-      <HeaderText>
-        <HeaderHeading>Your Marketing Team</HeaderHeading>
-      </HeaderText>
-    )
-  }
-
-  if (location.pathname === '/contact') {
-    return (
-      <HeaderText>
-        <HeaderHeading>Contact Us</HeaderHeading>
-      </HeaderText>
-    )
-  }
-
-  if (location.pathname === '/success') {
-    return (
-      <HeaderText>
-        <HeaderHeading>Success</HeaderHeading>
-      </HeaderText>
-    )
-  }
-
-  if (location.pathname === '/services/basic') {
-    return (
-      <HeaderText>
-        <HeaderHeading>Basic Package</HeaderHeading>
-      </HeaderText>
-    )
-  }
-
-  if (location.pathname === '/services/standard') {
-    return (
-      <HeaderText>
-        <HeaderHeading>Standard Package</HeaderHeading>
-      </HeaderText>
-    )
-  }
-
-  if (location.pathname === '/services/premium') {
-    return (
-      <HeaderText>
-        <HeaderHeading>Premium Package</HeaderHeading>
-      </HeaderText>
-    )
-  }
-
-  if (location.pathname === '/services/website') {
-    return (
-      <HeaderText>
-        <HeaderHeading>Website Creation</HeaderHeading>
-      </HeaderText>
-    )
-  }
-}
-
-const Header = ({ location }) => (
+const Header = ({ location, headerText }) => (
   <Spring
     from={{ height: location.pathname === '/' ? 300 : 600 }}
     to={{ height: location.pathname === '/' ? 600 : 300 }}
@@ -201,7 +103,24 @@ const Header = ({ location }) => (
     {props => (
       <HeaderWrapper style={props}>
         <Nav />
-        {DynamicHeaderText({ location })}
+        {location.pathname === '/' ? (
+          <HeaderText>
+            <HeaderHeadingHome>
+              Package based web services for local businesses
+              <HeaderSubHeading>
+                With the most affordable SEO consulting on the market
+              </HeaderSubHeading>
+            </HeaderHeadingHome>
+            <HeaderLinkStyle to="/services">
+              Start Now
+              <DownIcon />
+            </HeaderLinkStyle>
+          </HeaderText>
+        ) : (
+          <HeaderText>
+            <HeaderHeading>{headerText}</HeaderHeading>
+          </HeaderText>
+        )}
       </HeaderWrapper>
     )}
   </Spring>

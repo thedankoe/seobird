@@ -15,6 +15,14 @@ const ProblemWrapper = styled.div`
   width: ${props => props.theme.maxWidth};
   margin: ${props => props.theme.sectionSpace} auto;
   text-align: center;
+
+  @media ${device.desktop} {
+    width: 80%;
+  }
+
+  @media ${device.laptop} {
+    width: 90%;
+  }
 `
 
 const ProblemContainer = styled.div`
@@ -36,6 +44,14 @@ const WrapperBlue = styled.div`
 const ProbContainerBlue = styled.div`
   width: ${props => props.theme.maxWidth};
   margin: 0 auto;
+
+  @media ${device.desktop} {
+    width: 80%;
+  }
+
+  @media ${device.laptop} {
+    width: 90%;
+  }
 `
 
 export const ParagraphSecondary = styled(ParagraphStyle)`
@@ -68,6 +84,19 @@ const ProblemList = styled.ul`
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @media ${device.desktop} {
+    width: 80%;
+  }
+
+  @media ${device.laptop} {
+    width: 90%;
+  }
+
+  @media ${device.tabletS} {
+    width: 95%;
+    align-items: flex-start;
+  }
 `
 
 const ProblemListItem = styled.li`
@@ -76,6 +105,9 @@ const ProblemListItem = styled.li`
   align-items: center;
   :not(:last-child) {
     margin-bottom: 1.5rem;
+  }
+  div {
+    width: 3rem;
   }
 `
 
@@ -91,7 +123,7 @@ const ProblemSolution = () => (
         </ParagraphStyle>
         <ParagraphSecondary>
           What if their SEO strategy isn't the best for your business? Then it's
-          time to cancel and move on to the next glorified service to grow you
+          time to cancel and move on to the next glorified service to grow your
           business. The cycle continues.
         </ParagraphSecondary>
       </ProblemContainer>
@@ -108,23 +140,33 @@ const ProblemSolution = () => (
         </ParagraphBlue>
         <ProblemList>
           <ProblemListItem>
-            <CheckMark />
+            <div>
+              <CheckMark />
+            </div>
             <span>Services that result in the most growth are prioritized</span>
           </ProblemListItem>
           <ProblemListItem>
-            <CheckMark />
+            <div>
+              <CheckMark />
+            </div>
             <span>Services that don't work are refactored and tested</span>
           </ProblemListItem>
           <ProblemListItem>
-            <CheckMark />
+            <div>
+              <CheckMark />
+            </div>
             <span>No time is wasted with constant emails</span>
           </ProblemListItem>
           <ProblemListItem>
-            <CheckMark />
+            <div>
+              <CheckMark />
+            </div>
             <span>The sign up process is streamlined and affordable</span>
           </ProblemListItem>
           <ProblemListItem>
-            <CheckMark />
+            <div>
+              <CheckMark />
+            </div>
             <span>You can always request appointments and phone calls</span>
           </ProblemListItem>
         </ProblemList>

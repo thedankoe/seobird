@@ -59,10 +59,10 @@ const SuccessPage = ({ location }) => (
     `}
     render={data => (
       <>
-        <Helmet title="Success | SEOBird">
+        <Helmet title="Thank You!">
           <html lang="en" />
         </Helmet>
-        <Layout location={location}>
+        <Layout location={location} headerText="Success">
           <SuccessWrapper>
             <SuccessText>
               <SuccessHeading>Thank you for contacting us!</SuccessHeading>

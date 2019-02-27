@@ -1,17 +1,21 @@
 import React from 'react'
 import styled from 'styled-components'
 import { device } from './styles/MediaQueries'
-import {
-  HeadingStyle,
-  ParagraphStyle,
-  SubHeadingStyle,
-} from './styles/TextStyles'
+import { HeadingStyle, ParagraphStyle } from './styles/TextStyles'
 import { PencilIcon } from './styles/IconStyles'
 
 const ProcessWrapper = styled.div`
   width: ${props => props.theme.maxWidth};
   margin: ${props => props.theme.sectionSpace} auto;
   text-align: center;
+
+  @media ${device.desktop} {
+    width: 80%;
+  }
+
+  @media ${device.laptopL} {
+    width: 95%;
+  }
 `
 
 const ProcessList = styled.ol`
@@ -24,7 +28,7 @@ const ProcessList = styled.ol`
 `
 
 const ProcessListContainer = styled.div`
-  width: 60%;
+  width: 70%;
   padding: 1.5rem 3rem;
   background: rgba(0, 0, 0, 0.1);
   border-radius: 3px;
@@ -32,6 +36,18 @@ const ProcessListContainer = styled.div`
   align-items: center;
   :not(:last-child) {
     margin-bottom: 2rem;
+  }
+
+  @media ${device.desktop} {
+    width: 80%;
+  }
+
+  @media ${device.laptop} {
+    width: 90%;
+  }
+
+  @media ${device.tabletS} {
+    width: 95%;
   }
 `
 
@@ -106,9 +122,9 @@ const Process = () => (
         <ProcessListItem>
           Step 4
           <span>
-            We produce content articles to ensure organic growth, create landing
-            pages for promotions and email collection. We then start adjusting
-            our strategy according to reported analytics.
+            We produce content articles to ensure organic growth and create
+            landing pages for promotions and email collection. We then start
+            adjusting our strategy according to reported analytics.
           </span>
         </ProcessListItem>
       </ProcessListContainer>

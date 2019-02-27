@@ -4,6 +4,7 @@ import { device } from './MediaQueries'
 
 const HeadingStyle = styled.h2`
   margin-bottom: ${props => props.theme.textSpace};
+  text-transform: capitalize;
   font-size: 3.8rem;
   font-weight: 700;
   color: ${props => props.theme.primary};
@@ -31,6 +32,7 @@ const HeadingStyle = styled.h2`
 
 const HeadingStyleLight = styled.h2`
   margin-bottom: ${props => props.theme.textSpace};
+  text-transform: capitalize;
   font-size: 3.8rem;
   font-weight: 700;
   color: #fff;
@@ -142,7 +144,6 @@ const ColoredLink = styled(Link)`
 `
 
 const HeaderLinkStyle = styled(LinkStyle)`
-  width: 15rem;
   margin: 0;
   padding: 1rem;
   background: ${props => props.theme.secondary};
@@ -154,10 +155,6 @@ const HeaderLinkStyle = styled(LinkStyle)`
       transform: translateX(0);
     }
   }
-
-  @media ${device.tabletS} {
-    margin: 0 auto;
-  }
 `
 
 const CheckoutButton = styled.button`
@@ -168,6 +165,28 @@ const CheckoutButton = styled.button`
   color: #fff;
   font-size: 2.2rem;
   font-weight: 500;
+  border: none;
+  border-radius: 3px;
+  box-shadow: ${props => props.theme.bs};
+  cursor: pointer;
+  transition: all ease 0.3s;
+  :hover {
+    background: ${props => props.theme.CTAHover};
+    box-shadow: ${props => props.theme.bsHover};
+    transform: translateY(0.3rem);
+  }
+`
+
+const CheckoutLink = styled(Link)`
+  display: block;
+  width: 100%;
+  margin: 2rem auto 0 auto;
+  padding: 4rem;
+  background: ${props => props.theme.CTA};
+  color: #fff;
+  font-size: 2.2rem;
+  font-weight: 500;
+  text-align: center;
   border: none;
   border-radius: 3px;
   box-shadow: ${props => props.theme.bs};
@@ -224,6 +243,7 @@ export {
   FeedbackLinkStyle,
   HeaderLinkStyle,
   CheckoutButton,
+  CheckoutLink,
   ProblemLink,
   PlainLink,
   ColoredLink,

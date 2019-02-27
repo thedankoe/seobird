@@ -17,6 +17,20 @@ const FormStyle = styled.form`
   margin-top: ${props => props.theme.textSpace};
 `
 
+const FormSubHeading = styled(SubHeadingStyleLight)`
+  width: ${props => props.theme.maxWidth};
+  margin: 0 auto;
+  text-align: center;
+
+  @media ${device.desktop} {
+    width: 80%;
+  }
+
+  @media ${device.laptopL} {
+    width: 95%;
+  }
+`
+
 const FormGroup = styled.div`
   width: 100%;
   display: flex;
@@ -88,10 +102,10 @@ const FormButton = styled.button`
 const ContactForm = () => (
   <FormWrapper>
     <HeadingStyleLight>Request an appointment</HeadingStyleLight>
-    <SubHeadingStyleLight>
+    <FormSubHeading>
       Online marketing can be stressful, we are here to help. Tell us your
       questions and concerns and we will guide you in the right direction.
-    </SubHeadingStyleLight>
+    </FormSubHeading>
     <FormStyle
       name="contact"
       method="POST"
@@ -136,6 +150,7 @@ const ContactForm = () => (
           { value: 'Standard Website', id: 3 },
           { value: 'Premium Website', id: 4 },
           { value: 'Custom Package', id: 5 },
+          { value: 'Cancelling Services', id: 6 },
         ]}
       />
       <FormGroup>
