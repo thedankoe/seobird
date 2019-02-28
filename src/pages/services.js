@@ -125,17 +125,29 @@ const BestServiceWrapper = styled.div`
 const MarketingSolutionsPage = ({ location }) => (
   <>
     <Helmet
-      title="Marketing Solutions for Local Businesses at an Affordable Price"
+      title="Local Marketing Services for Small Businesses at an Affordable Price"
       meta={[
-        { name: 'description', content: 'Sample' },
-        { name: 'keywords', content: 'sample, something' },
+        {
+          name: 'description',
+          content:
+            'Local marketing services and SEO consulting for small businesses. We get your business ranking in search engines at an affordable price.',
+        },
+        {
+          name: 'keywords',
+          content:
+            'local marketing services, rank in search results, grow small business online',
+        },
       ]}
     >
       <html lang="en" />
     </Helmet>
-    <Layout location={location} headerText="Marketing Solutions">
+    <Layout
+      location={location}
+      headerText="Local Marketing Services"
+      headerSub="Rank in search results and grow online"
+    >
       <MarketingPageHeading>
-        Online marketing solutions for local businesses
+        Local Marketing Services to Rank Your Small Business
       </MarketingPageHeading>
       <MarketingPageSubHeading>
         Finding the right marketing company is not easy, there are so many
@@ -143,7 +155,7 @@ const MarketingSolutionsPage = ({ location }) => (
       </MarketingPageSubHeading>
       <MarketingPageSubHeading>
         This is why we ONLY work with local businesses. We get you more
-        customers through effective online marketing and development.
+        customers through effective online marketing and search engine ranking.
       </MarketingPageSubHeading>
       <MarketingPageParagraph>
         We provide the following services&#58;

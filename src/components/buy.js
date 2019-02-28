@@ -48,7 +48,7 @@ const Buy = () => (
         package each month. This keeps them efficient and affordable.
       </BuySubHeading>
       <ParagraphStyleLight>
-        Interested in faster growth?{' '}
+        Our services are scalable. Interested in faster growth?{' '}
         <ColoredLink to="/contact">Contact us</ColoredLink> for a custom
         package.
       </ParagraphStyleLight>

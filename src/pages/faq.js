@@ -44,15 +44,26 @@ const FAQPage = ({ location }) => (
     <Helmet
       title="FAQ for Online SEO Consulting and Website Creation"
       meta={[
-        { name: 'description', content: 'Sample' },
-        { name: 'keywords', content: 'sample, something' },
+        {
+          name: 'description',
+          content:
+            'We answer questions about online marketing, SEO consulting, and website creation for local businesses.',
+        },
+        {
+          name: 'keywords',
+          content: 'small business online marketing questions',
+        },
       ]}
     >
       <html lang="en" />
     </Helmet>
-    <Layout location={location} headerText="Frequently Asked Questions">
+    <Layout
+      location={location}
+      headerText="Frequently Asked Questions"
+      headerSub="For small businesses looking for affordable online marketing"
+    >
       <FAQWrapper>
-        <HeadingStyle>All of your questions answered</HeadingStyle>
+        <HeadingStyle>Your online marketing questions answered</HeadingStyle>
         <FAQContainer>
           <div>
             <UltraSubHeadingStyle>

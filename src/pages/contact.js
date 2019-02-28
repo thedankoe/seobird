@@ -28,7 +28,11 @@ const ContactPage = ({ location }) => (
     >
       <html lang="en" />
     </Helmet>
-    <Layout location={location} headerText="Contact Us">
+    <Layout
+      location={location}
+      headerText="Contact Us"
+      headerSub="Request a custom package or learn more about our services"
+    >
       <ContactWrapper>
         <ContactForm />
       </ContactWrapper>

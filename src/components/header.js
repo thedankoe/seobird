@@ -95,7 +95,7 @@ const HeaderSubHeading = styled.span`
   }
 `
 
-const Header = ({ location, headerText }) => (
+const Header = ({ location, headerText, headerSub }) => (
   <Spring
     from={{ height: location.pathname === '/' ? 300 : 600 }}
     to={{ height: location.pathname === '/' ? 600 : 300 }}
@@ -118,7 +118,10 @@ const Header = ({ location, headerText }) => (
           </HeaderText>
         ) : (
           <HeaderText>
-            <HeaderHeading>{headerText}</HeaderHeading>
+            <HeaderHeading>
+              {headerText}
+              <HeaderSubHeading>{headerSub}</HeaderSubHeading>
+            </HeaderHeading>
           </HeaderText>
         )}
       </HeaderWrapper>

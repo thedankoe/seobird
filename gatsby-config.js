@@ -7,7 +7,7 @@ module.exports = {
     title: 'SEOBird | Affordable SEO for local businesses',
     description:
       'Local businesses thrive if they invest in their online presence. We help get customers to your site, increase conversion rates, and create quality content at an affordable price.',
-    siteUrl: 'https://www.seobird.co',
+    siteUrl: 'https://www.seo-bird.com',
   },
   plugins: [
     {
@@ -26,7 +26,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: 'seobird.co',
+        name: 'seo-bird.com',
         short_name: 'SEOBird',
         start_url: '/',
         icon: 'src/images/seobird-favicon.png',

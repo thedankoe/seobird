@@ -52,7 +52,7 @@ const StandardCheckout = ({ location }) => (
             <ParagraphStyle>
               Start growing your business with affordable SEO consulting
             </ParagraphStyle>
-            <CheckoutPackage plan="plan_EZFX0pCmg8LOVB" />
+            <CheckoutPackage plan="plan_EZ7NAKGeDGQF42" />
             <FAQParagraph>Secure payment through Stripe</FAQParagraph>
           </StandardCheckoutCard>
         </CardContainer>
@@ -88,7 +88,7 @@ const StandardCheckout = ({ location }) => (
                 emails
               </li>
             </CardList>
-            <CheckoutPackage plan="plan_EaGLboC2E8evm4" />
+            <CheckoutPackage plan="plan_Ebqd4zRBhzgS5L" />
             <FAQParagraph>Secure payment through Stripe</FAQParagraph>
           </StandardCheckoutCard>
         </CardContainer>

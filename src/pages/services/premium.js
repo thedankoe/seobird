@@ -5,7 +5,6 @@ import {
   HeadingStyle,
   SubHeadingStyle,
   ParagraphStyle,
-  ColoredLink,
   SubHeadingStyleLight,
 } from '../../components/styles/TextStyles'
 import CheckoutPackage from '../../components/checkoutPackage'
@@ -13,15 +12,12 @@ import {
   PackageWrapper,
   PackageContainer,
   PackageBuyWrapper,
-  PackageBuyContainer,
   PackageBuyCard,
   PackageBuyList,
   PackageBuyPara,
   PackageBuyCTA,
-  PackageBilling,
   PackageBuyParaEnd,
 } from './standard'
-import { FAQParagraph } from '../faq'
 import { CheckMark } from '../../components/styles/IconStyles'
 
 const PremiumPage = ({ location }) => (
@@ -104,7 +100,7 @@ const PremiumPage = ({ location }) => (
                 Customers want to find your business, let your website find{' '}
                 <em>them</em>.
               </SubHeadingStyleLight>
-              <CheckoutPackage plan="plan_EaGGbHfckB3loj" />
+              <CheckoutPackage plan="plan_EbqerTZfxUJVGi" />
               <PackageBuyParaEnd>
                 Secure payment through Stripe
               </PackageBuyParaEnd>

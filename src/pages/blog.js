@@ -23,14 +23,26 @@ const BlogPage = ({ location }) => (
     <Helmet
       title="Growth Tips for Local Businesses | Affordable SEO Consulting"
       meta={[
-        { name: 'description', content: 'Sample' },
-        { name: 'keywords', content: 'sample, something' },
+        {
+          name: 'description',
+          content:
+            'Learn how to grow your online presence as a local or small business. Learn SEO, online marketing, and how to implement them.',
+        },
+        {
+          name: 'keywords',
+          content:
+            'growth tips for local businesses, how to grow as a small business',
+        },
       ]}
     >
       <html lang="en" />
     </Helmet>
-    <Layout location={location} headerText="Growth Tips">
-      <BlogPageHeading>Expert advice on growing your business</BlogPageHeading>
+    <Layout
+      location={location}
+      headerText="Growth Tips for Small Businesses"
+      headerSub="Learn how to grow your online presence as a small business"
+    >
+      <BlogPageHeading>Expert advice on growing locally</BlogPageHeading>
       <GrowthTipsBlog />
     </Layout>
   </>

@@ -11,19 +11,7 @@ import {
   ProblemLink,
 } from '../../components/styles/TextStyles'
 import CheckoutPackage from '../../components/checkoutPackage'
-import {
-  PackageWrapper,
-  PackageContainer,
-  PackageBuyWrapper,
-  PackageBuyContainer,
-  PackageBuyCard,
-  PackageBuyList,
-  PackageBuyPara,
-  PackageBuyCTA,
-  PackageBilling,
-  PackageBuyParaEnd,
-} from './standard'
-import { FAQParagraph } from '../faq'
+import { PackageWrapper, PackageContainer } from './standard'
 import { CheckMark, RightIcon } from '../../components/styles/IconStyles'
 import { BuySubHeading, BuyWrapper } from '../../components/buy'
 import {
@@ -123,10 +111,10 @@ const EmailMarketingPage = ({ location }) => (
                 Monthly ROI report and ongoing strategy
               </li>
             </CardList>
-            <CheckoutPackage plan="plan_EaGJI3Ln9Bki6H" />
+            <CheckoutPackage plan="plan_EbqdENYKmxGw2I" />
           </Card>
           <Card>
-            <HeadingStyle>Weekly Email Marketing</HeadingStyle>
+            <HeadingStyle>Email Marketing and Landing Page</HeadingStyle>
             <CardParagraph>$399/month</CardParagraph>
             <ParagraphStyle>
               6 month contract - <span>Done For You</span>
@@ -163,7 +151,7 @@ const EmailMarketingPage = ({ location }) => (
                 Monthly ROI report and ongoing strategy
               </li>
             </CardList>
-            <CheckoutPackage plan="plan_EaIDxB67wVn1FK" />
+            <CheckoutPackage plan="plan_EbqcYk2HLDYSc9" />
           </Card>
         </CardContainer>
         <ProblemLink to="/contact">

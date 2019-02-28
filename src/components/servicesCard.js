@@ -100,7 +100,7 @@ const ServicesCard = () => (
           <div>
             <CheckMark />
           </div>
-          Problems that will most increase growth when fixed are prioritized
+          Problems that will impact growth the most when fixed are prioritized
         </li>
         <li>
           <div>
@@ -148,7 +148,7 @@ const ServicesCard = () => (
           <div>
             <CheckMark />
           </div>
-          Problems that will most increase growth when fixed are prioritized
+          Problems that will impact growth the most when fixed are prioritized
         </li>
         <li>
           <div>
