@@ -6,10 +6,9 @@ import {
   HeadingStyle,
   SubHeadingStyle,
   ParagraphStyle,
-  ColoredLink,
 } from '../../components/styles/TextStyles'
 import CheckoutPackage from '../../components/checkoutPackage'
-import { PackageWrapper, PackageBilling, PackageBuyContainer } from './standard'
+import { PackageWrapper } from './standard'
 import { FAQParagraph } from '../faq'
 import { CheckMark } from '../../components/styles/IconStyles'
 import {
@@ -18,7 +17,6 @@ import {
   CardList,
   CardParagraph,
 } from '../../components/servicesCard'
-import { BillingEmailWrapper } from './email-marketing'
 
 const StandardCheckoutCard = styled(Card)`
   width: 50%;
