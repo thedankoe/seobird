@@ -57,7 +57,7 @@ const FormGroup = styled.div`
     border: none;
     border-radius: 3px;
     color: #fff;
-    font-family: Raleway, sans-serif;
+    font-family: Roboto, sans-serif;
     font-size: 1.8rem;
 
     @media ${device.tablet} {
