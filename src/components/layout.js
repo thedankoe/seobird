@@ -16,6 +16,7 @@ const theme = {
   black: '#004040',
   grey: '#333',
   lightGrey: '#DDD',
+  lightestGrey: '#EEE',
   success: '#55C57A',
   warning: '#FF7730',
   maxWidth: '62%',

@@ -72,27 +72,16 @@ const BlogLink = styled(LinkStyle)`
   margin: 1rem 0 0 0;
 `
 
-const BlogHeading = styled(HeadingStyle)`
-  :after {
-    content: '';
-    height: 1px;
-    width: 150px;
-    margin: 1.5rem auto 0 auto;
-    background: ${props => props.theme.secondaryLight};
-    display: block;
-  }
-`
-
 const BlogSection = () => (
   <StaticQuery
     query={INDEX_POST_QUERY}
     render={({ allMarkdownRemark }) => (
       <BlogSectionWrapper>
-        <BlogHeading>
+        <HeadingStyle>
           MedWeb Marketing is a dedicated team of <span>expert marketers</span>{' '}
           focused on helping medical specialists get <span>more customers</span>{' '}
           via online marketing and consulting
-        </BlogHeading>
+        </HeadingStyle>
         <BlogContainer>
           {allMarkdownRemark.edges.map(edge => (
             <BlogBlock key={edge.node.frontmatter.slug}>

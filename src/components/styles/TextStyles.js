@@ -97,7 +97,7 @@ const ParagraphStyleLight = styled.p`
 const LinkStyle = styled(Link)`
   width: 15rem;
   margin: 0 auto;
-  background: ${props => props.theme.primary};
+  background: ${props => props.theme.secondary};
   border-radius: 5px;
   box-shadow: ${props => props.theme.bs};
   font-size: 1.8rem;
@@ -109,7 +109,7 @@ const LinkStyle = styled(Link)`
   transition: all ease 0.3s;
   &:hover {
     box-shadow: ${props => props.theme.bsHover};
-    background: ${props => props.theme.primaryLight};
+    background: ${props => props.theme.secondaryLight};
     transform: translateY(3px);
     svg {
       transform: translateX(0.5rem);
@@ -223,7 +223,7 @@ const FeedbackLinkStyle = styled(LinkStyle)`
 `
 
 const ProblemLink = styled(FeedbackLinkStyle)`
-  width: 40rem;
+  width: 28rem;
   transform: translateY(0);
   :hover {
     transform: translateY(0.3rem);

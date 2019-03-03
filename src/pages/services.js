@@ -172,7 +172,7 @@ const MarketingSolutionsPage = ({ location }) => (
             marketing campaigns, with or without the purchase of an SEO package.
           </EmailParagraph>
           <ProblemLink to="/services/email-marketing">
-            Email marketing as a standalone service
+            Purchase standalone
             <RightIcon />
           </ProblemLink>
         </EmailMarketingContainer>

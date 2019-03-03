@@ -155,13 +155,13 @@ const ProblemSolution = () => (
             <div>
               <CheckMark />
             </div>
-            <span>No time is wasted with constant emails</span>
+            <span>The sign up process is streamlined and affordable</span>
           </ProblemListItem>
           <ProblemListItem>
             <div>
               <CheckMark />
             </div>
-            <span>The sign up process is streamlined and affordable</span>
+            <span>Stay updated with monthly ROI reports and checklists</span>
           </ProblemListItem>
           <ProblemListItem>
             <div>
@@ -170,10 +170,6 @@ const ProblemSolution = () => (
             <span>You can always request appointments and phone calls</span>
           </ProblemListItem>
         </ProblemList>
-        <ProblemLink to="/services/services">
-          Convinced already? Here's our services
-          <RightIcon />
-        </ProblemLink>
       </ProbContainerBlue>
     </WrapperBlue>
     <LeadSection />
@@ -185,7 +181,7 @@ const ProblemSolution = () => (
         convinced yet?
       </ParagraphBlueBold>
       <ProblemLink to="/services">
-        Here's more detail on our services
+        Detail on our services
         <RightIcon />
       </ProblemLink>
     </WrapperBlue>

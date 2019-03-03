@@ -70,7 +70,7 @@ const BlogLink = styled(LinkStyle)`
   margin: 1rem 0 0 0;
 `
 
-const ArchiveContainer = styled.div`
+const ArchiveContainer = styled.aside`
   width: 100%;
 
   @media ${device.desktop} {
@@ -80,18 +80,27 @@ const ArchiveContainer = styled.div`
 `
 
 const ArchiveHeading = styled.h4`
-  font-size: 2.2rem;
+  font-size: 2.4rem;
+  :after {
+    content: '';
+    height: 1px;
+    width: 150px;
+    margin-bottom: 2rem;
+    background: ${props => props.theme.secondaryLight};
+    display: block;
+  }
 `
 
 const ArchiveLink = styled(Link)`
-  font-size: 1.8rem;
-  color: ${props => props.theme.secondary};
+  font-size: 2.2rem;
+  color: ${props => props.theme.CTA};
   display: block;
+  transition: all ease 0.3s;
   :not(:last-child) {
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
   }
   :hover {
-    color: ${props => props.theme.secondaryLight};
+    color: ${props => props.theme.CTAHover};
   }
 `
 

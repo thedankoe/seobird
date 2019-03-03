@@ -1,50 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
 import Helmet from 'react-helmet'
-import {
-  HeadingStyle,
-  ParagraphStyle,
-  ProblemLink,
-  UltraSubHeadingStyle,
-  HeadingStyleLight,
-  SubHeadingStyleLight,
-} from '../components/styles/TextStyles'
-import { RightIcon } from '../components/styles/IconStyles'
-
+import { HeadingStyle, ParagraphStyle } from '../components/styles/TextStyles'
 import Layout from '../components/layout'
 import { device } from '../components/styles/MediaQueries'
 import FBGroup from '../components/fbGroup'
-
-const AboutUltraSub = styled(UltraSubHeadingStyle)`
-  margin-bottom: ${props => props.theme.textSpace};
-  color: #fff;
-`
-
-const AboutHeadingContainer = styled.div`
-  text-align: center;
-  margin-bottom: ${props => props.theme.sectionSpace};
-
-  @media ${device.desktop} {
-    width: 80%;
-  }
-
-  @media ${device.laptopL} {
-    width: 95%;
-  }
-`
-
-const AboutSecondaryContainer = styled(AboutHeadingContainer)`
-  width: ${props => props.theme.maxWidth};
-  margin: 0 auto ${props => props.theme.sectionSpace} auto;
-  padding: ${props => props.theme.textSpace} 1rem;
-  background: linear-gradient(
-    to right bottom,
-    ${props => props.theme.secondaryLight},
-    ${props => props.theme.secondary}
-  );
-  box-shadow: ${props => props.theme.bs};
-  border-radius: 6px;
-`
 
 const AboutPageHeadingLight = styled(HeadingStyle)`
   width: ${props => props.theme.maxWidth};
@@ -147,25 +107,6 @@ const AboutPage = ({ location }) => (
       headerSub="Our mission is to grow your small business online"
     >
       <AboutWrapper>
-        <AboutSecondaryContainer>
-          <HeadingStyleLight>
-            We know what your business needs to grow
-          </HeadingStyleLight>
-          <SubHeadingStyleLight>
-            We've said this before and we will keep on saying it:{' '}
-            <em>
-              a website without targeted content is like a business without
-              customers.
-            </em>
-          </SubHeadingStyleLight>
-          <AboutUltraSub>
-            Let your website, your best salesman, do the work for you.
-          </AboutUltraSub>
-          <ProblemLink to="/services">
-            Here's more detail on our services
-            <RightIcon />
-          </ProblemLink>
-        </AboutSecondaryContainer>
         <AboutContainer>
           <AboutPageHeading>Experience in the modern market</AboutPageHeading>
           <AboutParagraph>

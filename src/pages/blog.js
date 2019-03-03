@@ -7,15 +7,6 @@ import Layout from '../components/layout'
 
 const BlogPageHeading = styled(HeadingStyle)`
   margin-top: ${props => props.theme.sectionSpace};
-  margin-bottom: ${props => props.theme.textSpace};
-  :after {
-    content: '';
-    height: 1px;
-    width: 150px;
-    margin: 1.5rem auto 0 auto;
-    background: ${props => props.theme.secondaryLight};
-    display: block;
-  }
 `
 
 const BlogPage = ({ location }) => (

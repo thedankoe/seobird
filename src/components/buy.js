@@ -54,7 +54,7 @@ const Buy = () => (
       </ParagraphStyleLight>
       <ServicesCard />
       <ProblemLink to="/contact">
-        Still unsure? Schedule an appointment
+        Request more information
         <RightIcon />
       </ProblemLink>
     </BuyContainer>

@@ -51,7 +51,7 @@ const WebsiteFAQ = () => (
       amazing products and it results in more customers and higher profits.
     </MarketingEndParagraph>
     <ServicesWebsiteLink to="/services/website">
-      Check out our website packages
+      Website Packages
       <RightIcon />
     </ServicesWebsiteLink>
   </div>
