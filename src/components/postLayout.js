@@ -84,7 +84,6 @@ const PostWrapper = styled.div`
   }
 
   img {
-    width: 100rem;
     box-shadow: ${props => props.theme.bs};
     border-radius: 5px;
   }

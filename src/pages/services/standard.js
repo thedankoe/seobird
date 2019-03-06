@@ -42,6 +42,35 @@ export const PackageContainer = styled.div`
   }
 `
 
+export const HowListContainer = styled.div`
+  margin: ${props => props.theme.sectionSpace} auto;
+`
+
+export const HowList = styled.ol`
+  width: 70%;
+  margin: 0 auto ${props => props.theme.textSpace} auto;
+  list-style: none;
+
+  @media ${device.desktop} {
+    width: 80%;
+  }
+
+  @media ${device.laptopL} {
+    width: 95%;
+  }
+`
+
+export const HowListItem = styled.li`
+  margin-bottom: 2.5rem;
+  padding-left: 1.5rem;
+  color: ${props => props.theme.primaryLight};
+  font-size: 2.2rem;
+  font-weight: 500;
+  line-height: 1.8;
+  text-align: left;
+  border-left: 2px solid ${props => props.theme.secondaryLight};
+`
+
 export const PackageBuyWrapper = styled.div`
   margin: ${props => props.theme.sectionSpace} auto;
   text-align: left;
@@ -115,7 +144,11 @@ const StandardPage = ({ location }) => (
     >
       <html lang="en" />
     </Helmet>
-    <Layout location={location} headerText="Standard Package">
+    <Layout
+      location={location}
+      headerText="Standard SEO Consulting"
+      headerSub="Monthly actionable guidance sent to your inbox"
+    >
       <PackageWrapper>
         <HeadingStyle>The perfect SEO starter pack</HeadingStyle>
         <SubHeadingStyle>
@@ -145,7 +178,36 @@ const StandardPage = ({ location }) => (
             </ParagraphStyle>
           </div>
         </PackageContainer>
+        <HowListContainer>
+          <HeadingStyle>How it works</HeadingStyle>
+          <HowList>
+            <HowListItem>
+              We analyze your website and tell you exactly how to fix high
+              priority problems
+            </HowListItem>
+            <HowListItem>
+              We do the market research and find article ideas that will convert
+            </HowListItem>
+            <HowListItem>
+              We give you detailed social media posting guidelines that will
+              engage customers
+            </HowListItem>
+            <HowListItem>
+              We track analytics to see where we are growing and where we need
+              to improve
+            </HowListItem>
+            <HowListItem>
+              All of this is packaged up neatly in a monthly ROI report and sent
+              to your inbox
+            </HowListItem>
+          </HowList>
+          <SubHeadingStyle>
+            We will consistently touch base via email to check in. Any questions
+            or concerns are gladly welcomed anytime of the month.
+          </SubHeadingStyle>
+        </HowListContainer>
         <PackageBuyWrapper>
+          <HeadingStyle>Start you growth</HeadingStyle>
           <PackageBuyCard>
             <PackageBuyList>
               <PackageBuyPara>Services Included</PackageBuyPara>

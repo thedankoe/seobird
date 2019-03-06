@@ -6,11 +6,11 @@ featuredImage: "./why-seo-is-so-important-for-small-businesses-in-2019.jpg"
 metaDescription: SEO is important for everyone, especially small and local businesses. We break down why local SEO is valuable to your business.
 ---
 
-![Measuring content growth analytics](why-seo-is-so-important-for-small-businesses-in-2019.jpg 'Measuring content growth analytics')
-
 ## How SEO gets small businesses in front of customers
 
 It doesn't matter if you're a local print shop, a construction company, or an independant contractor. There's one fact you can't escape: most small business niches are highly competitive.
+
+![Measuring content growth analytics](why-seo-is-so-important-for-small-businesses-in-2019.jpg 'Measuring content growth analytics')
 
 As a local business owner you understand that you have one huge source of competition, corporate chains. With this, it's extremely important to stand out as a small business, you'll need your business to catch the eye. What better place to do this than on the web? This is where local SEO comes into play.
 

@@ -17,6 +17,9 @@ import {
   PackageBuyPara,
   PackageBuyCTA,
   PackageBuyParaEnd,
+  HowListContainer,
+  HowList,
+  HowListItem,
 } from './standard'
 import { CheckMark } from '../../components/styles/IconStyles'
 
@@ -31,7 +34,11 @@ const PremiumPage = ({ location }) => (
     >
       <html lang="en" />
     </Helmet>
-    <Layout location={location} headerText="Premium Package">
+    <Layout
+      location={location}
+      headerText="Premium Package"
+      headerSub="Sit back, relax, and watch your online presence grow"
+    >
       <PackageWrapper>
         <HeadingStyle>The ultimate growth bundle</HeadingStyle>
         <SubHeadingStyle>
@@ -61,6 +68,34 @@ const PremiumPage = ({ location }) => (
             </ParagraphStyle>
           </div>
         </PackageContainer>
+        <HowListContainer>
+          <HeadingStyle>How it works</HeadingStyle>
+          <HowList>
+            <HowListItem>
+              We analyze your website and fix high priority problems that will
+              result in growth
+            </HowListItem>
+            <HowListItem>
+              We do the market research and find article ideas that will convert
+            </HowListItem>
+            <HowListItem>
+              We post to priority social media platforms and engage with your
+              customers
+            </HowListItem>
+            <HowListItem>
+              We track analytics to see where we are growing and where we need
+              to improve
+            </HowListItem>
+            <HowListItem>
+              All of this is packaged up neatly in a monthly ROI report and sent
+              to your inbox
+            </HowListItem>
+          </HowList>
+          <SubHeadingStyle>
+            We will consistently touch base via email to check in. Any questions
+            or concerns are gladly welcomed anytime of the month.
+          </SubHeadingStyle>
+        </HowListContainer>
         <PackageBuyWrapper>
           <HeadingStyle>Start your growth</HeadingStyle>
           <PackageBuyCard>

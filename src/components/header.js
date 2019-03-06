@@ -9,7 +9,6 @@ import HeaderImg from '../images/seo-marketing-hero.jpg'
 import { device } from './styles/MediaQueries'
 
 const HeaderWrapper = styled.header`
-  position: relative;
   width: 100%;
   overflow: hidden;
   background-image: linear-gradient(
@@ -22,24 +21,24 @@ const HeaderWrapper = styled.header`
   background-size: cover;
 `
 
+const HeaderContainer = styled.div`
+  width: 90%;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+`
+
 const HeaderText = styled.div`
-  position: absolute;
-  left: 25%;
-  top: 50%;
   color: #fff;
   z-index: 2;
-  transform: translate(-25%, -50%);
-
-  @media ${device.tabletS} {
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
 `
 
 const HeaderHeadingHome = styled.h1`
   font-size: 4.8rem;
   font-weight: 500;
   text-align: left;
+  text-transform: capitalize;
   color: #fff;
   text-shadow: ${props => props.theme.ts};
 
@@ -48,8 +47,13 @@ const HeaderHeadingHome = styled.h1`
   }
 
   @media ${device.tabletS} {
-    width: 47rem;
     font-size: 3.2rem;
+  }
+`
+
+const HeaderLink = styled(HeaderLinkStyle)`
+  @media ${device.tabletS} {
+    align-self: flex-start;
   }
 `
 
@@ -57,6 +61,7 @@ const HeaderHeading = styled.h1`
   font-size: 4.8rem;
   font-weight: 500;
   text-align: left;
+  text-transform: capitalize;
   color: #fff;
   :after {
     content: '';
@@ -73,8 +78,11 @@ const HeaderHeading = styled.h1`
 
   @media ${device.tablet} {
     width: 50rem;
-    text-align: center;
     font-size: 3.5rem;
+  }
+
+  @media ${device.tabletS} {
+    font-size: 3.2rem;
   }
 `
 
@@ -83,6 +91,7 @@ const HeaderSubHeading = styled.span`
   font-weight: 300;
   text-align: left;
   color: #fff;
+  text-transform: none;
   display: block;
 
   @media ${device.tablet} {
@@ -90,40 +99,42 @@ const HeaderSubHeading = styled.span`
   }
 
   @media ${device.tabletS} {
-    width: 47rem;
+    width: 90%;
     font-size: 2.2rem;
   }
 `
 
 const Header = ({ location, headerText, headerSub }) => (
   <Spring
-    from={{ height: location.pathname === '/' ? 300 : 600 }}
-    to={{ height: location.pathname === '/' ? 600 : 300 }}
+    from={{ height: location.pathname === '/' ? 400 : 600 }}
+    to={{ height: location.pathname === '/' ? 600 : 400 }}
   >
     {props => (
       <HeaderWrapper style={props}>
         <Nav />
-        {location.pathname === '/' ? (
-          <HeaderText>
-            <HeaderHeadingHome>
-              Online marketing packages for small businesses
-              <HeaderSubHeading>
-                With the most affordable SEO consulting on the market
-              </HeaderSubHeading>
-            </HeaderHeadingHome>
-            <HeaderLinkStyle to="/services">
-              Start Now
-              <DownIcon />
-            </HeaderLinkStyle>
-          </HeaderText>
-        ) : (
-          <HeaderText>
-            <HeaderHeading>
-              {headerText}
-              <HeaderSubHeading>{headerSub}</HeaderSubHeading>
-            </HeaderHeading>
-          </HeaderText>
-        )}
+        <HeaderContainer>
+          {location.pathname === '/' ? (
+            <HeaderText>
+              <HeaderHeadingHome>
+                Online marketing packages for small businesses
+                <HeaderSubHeading>
+                  With the most affordable SEO consulting on the market
+                </HeaderSubHeading>
+              </HeaderHeadingHome>
+              <HeaderLink to="/services">
+                Start Now
+                <DownIcon />
+              </HeaderLink>
+            </HeaderText>
+          ) : (
+            <HeaderText>
+              <HeaderHeading>
+                {headerText}
+                <HeaderSubHeading>{headerSub}</HeaderSubHeading>
+              </HeaderHeading>
+            </HeaderText>
+          )}
+        </HeaderContainer>
       </HeaderWrapper>
     )}
   </Spring>

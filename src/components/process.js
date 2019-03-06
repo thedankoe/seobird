@@ -18,7 +18,7 @@ const ProcessWrapper = styled.div`
   }
 `
 
-const ProcessList = styled.ol`
+export const ProcessList = styled.ol`
   margin: ${props => props.theme.textSpace} 0
     ${props => props.theme.sectionSpace} 0;
   list-style: none;
@@ -27,7 +27,7 @@ const ProcessList = styled.ol`
   align-items: center;
 `
 
-const ProcessListContainer = styled.div`
+export const ProcessListContainer = styled.div`
   width: 70%;
   padding: 1.5rem 3rem;
   background: rgba(0, 0, 0, 0.1);
@@ -51,7 +51,7 @@ const ProcessListContainer = styled.div`
   }
 `
 
-const ProcessListItem = styled.li`
+export const ProcessListItem = styled.li`
   text-align: left;
   font-size: 2.5rem;
   font-weight: 600;
@@ -62,7 +62,7 @@ const ProcessListItem = styled.li`
   }
 `
 
-const ProcessListIcon = styled(PencilIcon)`
+export const ProcessListIcon = styled(PencilIcon)`
   font-size: 3rem;
   margin-right: 3rem;
 `
@@ -135,8 +135,9 @@ const Process = () => (
         <ProcessListItem>
           Step 5
           <span>
-            Fine tune and repeat, we send and monthly ROI reports and checklists
-            to you. Best results are noticed near the 6 month mark.
+            Fine tune and repeat, we send monthly ROI reports for all packages
+            and checklists for consulting packages to you. Best results are
+            noticed near the 6 month mark.
           </span>
         </ProcessListItem>
       </ProcessListContainer>

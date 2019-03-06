@@ -47,13 +47,21 @@ const WebsitePage = ({ location }) => (
     <Helmet
       title="Website Creation | Single and Multi-Page Websites for Local Businesses"
       meta={[
-        { name: 'description', content: 'Sample' },
+        {
+          name: 'description',
+          content:
+            'Great SEO starts with a great website centered towards conversion. We build extremely fast, SEO ready websites.',
+        },
         { name: 'keywords', content: 'sample, something' },
       ]}
     >
       <html lang="en" />
     </Helmet>
-    <Layout location={location} headerText="Website Creation">
+    <Layout
+      location={location}
+      headerText="Website Creation"
+      headerSub="Extremely fast, elegant, and SEO ready"
+    >
       <MarketingPageHeading>
         Conversion centered websites do the work for you
       </MarketingPageHeading>

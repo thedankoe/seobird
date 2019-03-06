@@ -64,6 +64,8 @@ const BlogBlock = styled.div`
 
 const BlogImage = styled(Img)`
   margin-bottom: 1rem;
+  border-radius: 4px;
+  box-shadow: ${props => props.theme.bs};
 `
 
 const BlogLink = styled(LinkStyle)`

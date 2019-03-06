@@ -113,8 +113,7 @@ const ServicesCard = () => (
           <div>
             <CheckMark />
           </div>
-          We give you monthly keywords to focus on and actionable advice to
-          implement them
+          Content article ideas, social media strategy, and website optimization
         </li>
         <li>
           <div>
