@@ -1,9 +1,12 @@
 ---
 slug: "/why-seo-is-so-important-for-small-businesses-in-2019"
 date: "2019-03-02"
+author: "Dan Koe"
+authorDesc: "Local SEO & Web Developer"
 title: "Why SEO is so Important for Small Businesses in 2019"
 featuredImage: "./why-seo-is-so-important-for-small-businesses-in-2019.jpg"
-metaDescription: SEO is important for everyone, especially small and local businesses. We break down why local SEO is valuable to your business.
+metaDescription: "SEO is important for everyone, especially small and local businesses. We break down why local SEO is valuable to your business."
+keywords: "why is SEO important for small business, SEO for small businesses 2019"
 ---
 
 ## How SEO gets small businesses in front of customers
@@ -60,6 +63,8 @@ There's a ton of things that can affect SEO, these are just the basics. [Our pac
 
 As you move into the coming months there are several reasons why you should consider re-evaluating your business strategy and incorporate SEO, even the slightest amount makes a big difference. Here's just some of the reasons SEO should be a priority:
 
+![Local SEO Search Results](local-seo-search-results.jpg 'Local SEO Search Results')
+
 ### Make the most of local searches
 
 Local searches are easily one of the best ways for businesses to connect with potential customers around them. It's evident now that not showing up in local searches could be a catastrophe for your business.
@@ -80,7 +85,7 @@ Once your practice ranks well, you’ll also have benefit of added awareness abo
 
 Here's another thing to get you excited about SEO. With each targeted content article you create, your traffic has the ability to double, depending on the keyword and volume of customers that will actually click through. Keep doing this and your traffic literally increases exponentially.
 
-### Create sustainable growth for your practice
+### Create sustainable growth for your business
 
 One of the great things about SEO is it allows you to create a sustainable strategy for growing your business on the internet. Great SEO will bring you higher rankings on SERPs which will lead to more clicks down the road.
 

@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-import { HeadingStyleLight, SubHeadingStyleLight } from './styles/TextStyles'
 import { device } from './styles/MediaQueries'
 import SelectBox from './selectBox'
 
@@ -17,26 +16,12 @@ const FormStyle = styled.form`
   margin-top: ${props => props.theme.textSpace};
 `
 
-const FormSubHeading = styled(SubHeadingStyleLight)`
-  width: ${props => props.theme.maxWidth};
-  margin: 0 auto;
-  text-align: center;
-
-  @media ${device.desktop} {
-    width: 80%;
-  }
-
-  @media ${device.laptopL} {
-    width: 95%;
-  }
-`
-
 const FormGroup = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
   label {
-    color: #fff;
+    color: ${props => props.theme.primary};
     font-size: 2.2rem;
     font-weight: 500;
     margin-bottom: 1rem;
@@ -53,7 +38,7 @@ const FormGroup = styled.div`
   textarea {
     width: 80rem;
     padding: 1.5rem 1rem;
-    background: rgba(0, 0, 0, 0.4);
+    background: rgba(0, 0, 0, 0.6);
     border: none;
     border-radius: 3px;
     color: #fff;
@@ -101,19 +86,23 @@ const FormButton = styled.button`
 
 const ContactForm = () => (
   <FormWrapper>
-    <HeadingStyleLight>Request an appointment</HeadingStyleLight>
-    <FormSubHeading>
-      Online marketing can be stressful, we are here to help. Tell us your
-      questions and concerns and we will guide you in the right direction.
-    </FormSubHeading>
     <FormStyle
       name="contact"
       method="POST"
-      action="/success"
-      data-netlify="true"
-      data-netlify-honeypot="bot-field"
+      action="https://mailthis.to/dan-seo-bird"
     >
-      <input type="hidden" name="bot-field" />
+      <input
+        type="hidden"
+        name="_subject"
+        value="SEOBird Contact Form Submission"
+      />
+      <input
+        type="hidden"
+        name="_after"
+        value="https://www.seo-bird.com/success"
+      />
+      <input type="hidden" name="_honeypot" value="" />
+      <input type="hidden" name="_confirmation" value="Success!" />
       <FormGroup>
         <label htmlFor="name">Full Name</label>
         <input
@@ -141,6 +130,16 @@ const ContactForm = () => (
           name="business"
           id="business"
           placeholder="John Doe Chiropractic"
+          required
+        />
+      </FormGroup>
+      <FormGroup>
+        <label htmlFor="url">Business URL</label>
+        <input
+          type="text"
+          name="url"
+          id="url"
+          placeholder="www.johndoechiro.com"
         />
       </FormGroup>
       <SelectBox

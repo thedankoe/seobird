@@ -5,12 +5,12 @@ import CaseStudy from '../components/caseStudy'
 import ProblemSolution from '../components/problemSolution'
 import Process from '../components/process'
 import Buy from '../components/buy'
-import FBGroup from '../components/fbGroup'
+import BlogSection from '../components/blogSection'
 
 const IndexPage = ({ location }) => (
   <>
     <Helmet
-      title="SEO Consulting and Website Creation for Local Businesses"
+      title="SEO Consulting and Services for Small Businesses"
       meta={[
         { name: 'description', content: 'Sample' },
         { name: 'keywords', content: 'sample, something' },
@@ -23,7 +23,7 @@ const IndexPage = ({ location }) => (
       <ProblemSolution />
       <Process />
       <Buy />
-      <FBGroup />
+      <BlogSection />
     </Layout>
   </>
 )

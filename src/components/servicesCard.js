@@ -7,6 +7,7 @@ import {
   SubHeadingStyle,
   ParagraphStyle,
   HeaderLinkStyle,
+  ColoredLink,
 } from './styles/TextStyles'
 
 export const CardContainer = styled.div`
@@ -126,8 +127,7 @@ const ServicesCard = () => (
           <div>
             <CheckMark />
           </div>
-          Email marketing can be added on at anytime, this is an option when
-          purchasing
+          Access to your project on Notion to keep an eye on our progress
         </li>
       </CardList>
       <CardLink to="/services/standard">Learn More</CardLink>
@@ -138,9 +138,9 @@ const ServicesCard = () => (
         For businesses that are tight on time that want the most return on
         investment.
       </SubHeadingStyle>
-      <CardParagraph>$999/month</CardParagraph>
+      <CardParagraph>$799/month</CardParagraph>
       <ParagraphStyle>
-        6 month contract - <span>Done For You</span>
+        Month to Month - <span>Done For You</span>
       </ParagraphStyle>
       <CardList>
         <li>
@@ -159,8 +159,8 @@ const ServicesCard = () => (
           <div>
             <CheckMark />
           </div>
-          Weekly content writing, daily social media posts (priority platforms),
-          and copywriting for all pages included
+          Weekly content writing, citation building, and copywriting for all
+          pages included
         </li>
         <li>
           <div>
@@ -173,8 +173,7 @@ const ServicesCard = () => (
           <div>
             <CheckMark />
           </div>
-          Email marketing is included, weekly email campaigns with the right
-          copy and offers
+          Access to your project on Notion to keep an eye on our progress
         </li>
       </CardList>
       <CardLink to="/services/premium">Learn More</CardLink>

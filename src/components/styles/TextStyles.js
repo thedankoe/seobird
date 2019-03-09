@@ -81,6 +81,7 @@ const ParagraphStyle = styled.p`
   font-size: 2.2rem;
   font-weight: 500;
   span {
+    display: block;
     font-weight: 600;
   }
 `

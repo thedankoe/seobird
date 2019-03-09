@@ -2,11 +2,36 @@ import React, { Component } from 'react'
 import Helmet from 'react-helmet'
 import { graphql } from 'gatsby'
 import styled from 'styled-components'
+import Img from 'gatsby-image'
 import Layout from './layout'
+import { device } from './styles/MediaQueries'
+import { ParagraphStyle } from './styles/TextStyles'
+import BlogSection from './blogSection'
 
 const PostWrapper = styled.div`
   width: ${props => props.theme.maxWidth};
   margin: ${props => props.theme.sectionSpace} auto;
+
+  @media ${device.tabletL} {
+    width: 80%;
+  }
+`
+
+const PersonContainer = styled.div`
+  display: flex;
+  align-items: center;
+`
+
+const PostImg = styled(Img)`
+  width: 10rem;
+  height: 10rem;
+  margin-right: 2rem;
+  border-radius: 50%;
+  box-shadow: ${props => props.theme.bs};
+`
+
+const PostContainer = styled.div`
+  margin: ${props => props.theme.sectionSpace} 0;
 
   h2 {
     margin-bottom: ${props => props.theme.textSpace};
@@ -58,6 +83,14 @@ const PostWrapper = styled.div`
     list-style: none;
     background: ${props => props.theme.lightestGrey};
     border-radius: 4px;
+
+    @media ${device.tablet} {
+      width: 90%;
+    }
+
+    @media ${device.tabletS} {
+      width: 100%;
+    }
   }
 
   li {
@@ -91,7 +124,7 @@ const PostWrapper = styled.div`
 
 export default class PostLayout extends Component {
   render() {
-    const { markdownRemark } = this.props.data
+    const { markdownRemark, file } = this.props.data
     const { location } = this.props
     return (
       <>
@@ -100,9 +133,12 @@ export default class PostLayout extends Component {
           meta={[
             {
               name: 'description',
-              content: '',
+              content: `${markdownRemark.frontmatter.metaDescription}`,
             },
-            { name: 'keywords', content: 'sample, something' },
+            {
+              name: 'keywords',
+              content: `${markdownRemark.frontmatter.keywords}`,
+            },
           ]}
         >
           <html lang="en" />
@@ -111,11 +147,22 @@ export default class PostLayout extends Component {
           location={location}
           headerText={markdownRemark.frontmatter.title}
         >
-          <PostWrapper
-            dangerouslySetInnerHTML={{
-              __html: markdownRemark.html,
-            }}
-          />
+          <PostWrapper>
+            <PersonContainer>
+              <PostImg fluid={file.childImageSharp.fluid} />
+              <ParagraphStyle>
+                {markdownRemark.frontmatter.author}{' '}
+                <span>{markdownRemark.frontmatter.authorDesc}</span>{' '}
+                {markdownRemark.frontmatter.date}
+              </ParagraphStyle>
+            </PersonContainer>
+            <PostContainer
+              dangerouslySetInnerHTML={{
+                __html: markdownRemark.html,
+              }}
+            />
+          </PostWrapper>
+          <BlogSection />
         </Layout>
       </>
     )
@@ -128,8 +175,19 @@ export const query = graphql`
       html
       frontmatter {
         title
-        date
+        metaDescription
+        keywords
+        author
+        authorDesc
+        date(formatString: "MMMM DD, YYYY")
         slug
+      }
+    }
+    file(relativePath: { eq: "local-seo-web-expert.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 590) {
+          ...GatsbyImageSharpFluid
+        }
       }
     }
   }

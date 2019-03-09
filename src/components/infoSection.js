@@ -54,12 +54,12 @@ const InfoSection = () => (
     <InfoBlock
       icon={<PencilIcon />}
       heading="Content Writing"
-      text="Our writers are highly-skilled communicators and persuadors."
+      text="Articles targeted towards your customers interests."
     />
     <InfoBlock
       icon={<TargetIcon />}
-      heading="Online Advertisements"
-      text="Target the right person with the right message at the right time."
+      heading="Usability Testing"
+      text="Rank higher and increase clickthrough rates with an accessable website."
     />
     <InfoBlock
       icon={<SocialIcon />}

@@ -99,11 +99,11 @@ const ServicesSection = () => (
     <div>
       <ServicesSubHeading>
         <TargetIcon />
-        Online Advertisements
+        Usability Testing
       </ServicesSubHeading>
       <ParagraphStyle>
-        We are ad agnostic, we offer you the ads that convert the most for your
-        business.
+        Increase ranking and clickthrough rates by making you website accessable
+        to everyone.
       </ParagraphStyle>
     </div>
     <div>

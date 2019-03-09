@@ -111,7 +111,7 @@ const PremiumPage = ({ location }) => (
               </li>
               <li>
                 <CheckMark />
-                Daily (weekday) Social Media Posts
+                Usability Testing &amp; Fixes
               </li>
               <li>
                 <CheckMark />
@@ -123,11 +123,11 @@ const PremiumPage = ({ location }) => (
               </li>
               <li>
                 <CheckMark />
-                Monthly ROI Report
+                Daily (Weekday) Facebook Posts
               </li>
               <li>
                 <CheckMark />
-                Weekly Email Campaigns
+                Monthly ROI Report
               </li>
             </PackageBuyList>
             <PackageBuyCTA>
@@ -135,7 +135,7 @@ const PremiumPage = ({ location }) => (
                 Customers want to find your business, let your website find{' '}
                 <em>them</em>.
               </SubHeadingStyleLight>
-              <CheckoutPackage plan="plan_EbqerTZfxUJVGi" />
+              <CheckoutPackage plan="plan_EfDGuJ0JJvRDDM" />
               <PackageBuyParaEnd>
                 Secure payment through Stripe
               </PackageBuyParaEnd>

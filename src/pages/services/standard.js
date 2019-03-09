@@ -221,11 +221,15 @@ const StandardPage = ({ location }) => (
               </li>
               <li>
                 <CheckMark />
-                Social Media Strategy
+                Usability Testing &amp; Fixes
               </li>
               <li>
                 <CheckMark />
                 Content Writing Guidelines
+              </li>
+              <li>
+                <CheckMark />
+                Facebook Page Strategy
               </li>
               <li>
                 <CheckMark />
@@ -234,10 +238,6 @@ const StandardPage = ({ location }) => (
               <li>
                 <CheckMark />
                 Monthly ROI Report
-              </li>
-              <li>
-                <CheckMark />
-                Can Add on Email Marketing at Any Time
               </li>
             </PackageBuyList>
             <PackageBuyCTA>

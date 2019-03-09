@@ -45,7 +45,8 @@ const Buy = () => (
       <HeadingStyleLight>Get started</HeadingStyleLight>
       <BuySubHeading>
         Our packages are value based, we do work according to the price of the
-        package each month. This keeps them efficient and affordable.
+        package each month. This keeps them streamlined, effective, and
+        affordable.
       </BuySubHeading>
       <ParagraphStyleLight>
         Our services are scalable. Interested in faster growth?{' '}

@@ -116,9 +116,9 @@ const Header = ({ location, headerText, headerSub }) => (
           {location.pathname === '/' ? (
             <HeaderText>
               <HeaderHeadingHome>
-                Online marketing packages for small businesses
+                SEO packages for small businesses
                 <HeaderSubHeading>
-                  With the most affordable SEO consulting on the market
+                  With the most affordable consulting on the market
                 </HeaderSubHeading>
               </HeaderHeadingHome>
               <HeaderLink to="/services">

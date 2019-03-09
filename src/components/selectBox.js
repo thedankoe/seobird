@@ -9,7 +9,7 @@ import { DownIcon, UpIcon } from './styles/IconStyles'
 const SelectWrapper = styled.div`
   width: 100%;
   label {
-    color: #fff;
+    color: ${props => props.theme.primary};
     font-size: 2.2rem;
     font-weight: 500;
   }
@@ -21,7 +21,7 @@ const SelectContainer = styled.div`
   margin-top: 1rem;
   margin-bottom: ${props => props.theme.textSpace};
   padding: 1.5rem 1rem;
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0.6);
   border-radius: 3px;
   font-size: 1.8rem;
   color: ${props => props.theme.lightGrey};
