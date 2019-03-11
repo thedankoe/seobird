@@ -11,7 +11,6 @@ import {
 } from '../../components/styles/TextStyles'
 import { CheckMark } from '../../components/styles/IconStyles'
 import PackageBG from '../../images/package-buy-bg.jpg'
-import BillingInfo from '../../components/billingInfo'
 import { device } from '../../components/styles/MediaQueries'
 
 export const PackageWrapper = styled.div`
@@ -27,6 +26,10 @@ export const PackageWrapper = styled.div`
 
   @media ${device.laptopL} {
     width: 95%;
+  }
+
+  @media ${device.tabletS} {
+    text-align: left;
   }
 `
 
@@ -255,7 +258,6 @@ const StandardPage = ({ location }) => (
             </PackageBuyCTA>
           </PackageBuyCard>
         </PackageBuyWrapper>
-        <BillingInfo />
       </PackageWrapper>
     </Layout>
   </>

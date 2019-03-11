@@ -4,9 +4,16 @@ import Helmet from 'react-helmet'
 import GrowthTipsBlog from '../components/growthTips'
 import { HeadingStyle } from '../components/styles/TextStyles'
 import Layout from '../components/layout'
+import { device } from '../components/styles/MediaQueries'
 
 const BlogPageHeading = styled(HeadingStyle)`
   margin-top: ${props => props.theme.sectionSpace};
+
+  @media ${device.tabletS} {
+    width: 95%;
+    margin: ${props => props.theme.sectionSpace} auto
+      ${props => props.theme.textSpace} auto;
+  }
 `
 
 const BlogPage = ({ location }) => (

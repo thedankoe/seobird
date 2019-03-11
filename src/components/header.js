@@ -74,10 +74,14 @@ const HeaderHeading = styled.h1`
     @media ${device.tablet} {
       margin: 1.5rem auto 0 auto;
     }
+
+    @media ${device.tabletS} {
+      margin: 1.5rem 0 0 0;
+    }
   }
 
   @media ${device.tablet} {
-    width: 50rem;
+    width: 100%;
     font-size: 3.5rem;
   }
 

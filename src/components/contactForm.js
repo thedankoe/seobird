@@ -99,7 +99,7 @@ const ContactForm = () => (
       <input
         type="hidden"
         name="_after"
-        value="https://www.seo-bird.com/success"
+        value="https://www.seo-bird.com/contact-success"
       />
       <input type="hidden" name="_honeypot" value="" />
       <input type="hidden" name="_confirmation" value="Success!" />
@@ -149,7 +149,8 @@ const ContactForm = () => (
           { value: 'Standard Website', id: 3 },
           { value: 'Premium Website', id: 4 },
           { value: 'Custom Package', id: 5 },
-          { value: 'Cancelling Services', id: 6 },
+          { value: 'Referrals', id: 6 },
+          { value: 'Cancelling Services', id: 7 },
         ]}
       />
       <FormGroup>

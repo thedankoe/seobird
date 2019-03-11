@@ -60,6 +60,10 @@ const BlogBlock = styled.div`
   :not(:last-child) {
     margin-bottom: ${props => props.theme.textSpace};
   }
+
+  @media ${device.tabletL} {
+    width: 95%;
+  }
 `
 
 const BlogImage = styled(Img)`
@@ -90,6 +94,10 @@ const ArchiveHeading = styled.h4`
     margin-bottom: 2rem;
     background: ${props => props.theme.secondaryLight};
     display: block;
+
+    @media ${device.desktop} {
+      margin: 0 auto 2rem auto;
+    }
   }
 `
 

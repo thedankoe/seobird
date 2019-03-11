@@ -26,6 +26,10 @@ export const MarketingPageHeading = styled(HeadingStyle)`
     margin: 1.5rem auto 0 auto;
     background: ${props => props.theme.secondaryLight};
     display: block;
+
+    @media ${device.tabletS} {
+      margin: 1.5rem 0 0 0;
+    }
   }
 
   @media ${device.desktop} {
@@ -50,6 +54,10 @@ export const MarketingPageSubHeading = styled(SubHeadingStyle)`
   @media ${device.laptopL} {
     width: 95%;
   }
+
+  @media ${device.tabletS} {
+    text-align: left;
+  }
 `
 
 export const MarketingPageParagraph = styled(ParagraphStyle)`
@@ -63,6 +71,10 @@ export const MarketingPageParagraph = styled(ParagraphStyle)`
 
   @media ${device.laptopL} {
     width: 95%;
+  }
+
+  @media ${device.tabletS} {
+    text-align: left;
   }
 `
 
@@ -119,6 +131,10 @@ const BestServiceWrapper = styled.div`
 
   @media ${device.laptopL} {
     width: 95%;
+  }
+
+  @media ${device.tabletS} {
+    text-align: left;
   }
 `
 
@@ -191,7 +207,6 @@ const MarketingSolutionsPage = ({ location }) => (
         </ParagraphStyle>
       </BestServiceWrapper>
       <Buy location={location} />
-      <FBGroup />
     </Layout>
   </>
 )

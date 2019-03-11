@@ -13,7 +13,7 @@ import {
 import CheckoutPackage from '../../components/checkoutPackage'
 import { PackageWrapper, PackageContainer } from './standard'
 import { CheckMark, RightIcon } from '../../components/styles/IconStyles'
-import { BuySubHeading, BuyWrapper } from '../../components/buy'
+import { BuySubHeading, BuyWrapper, BuyContainer } from '../../components/buy'
 import {
   CardContainer,
   Card,
@@ -23,6 +23,10 @@ import {
 
 export const BillingEmailWrapper = styled(PackageWrapper)`
   text-align: left;
+`
+
+const EmailForYouContainer = styled.div`
+  margin-top: ${props => props.theme.sectionSpace};
 `
 
 const EmailMarketingPage = ({ location }) => (
@@ -36,7 +40,11 @@ const EmailMarketingPage = ({ location }) => (
     >
       <html lang="en" />
     </Helmet>
-    <Layout location={location} headerText="Email Marketing">
+    <Layout
+      location={location}
+      headerText="Email Marketing Packages"
+      headerSub="Keep customers coming back and get more web traffic"
+    >
       <PackageWrapper>
         <HeadingStyle>Weekly email marketing</HeadingStyle>
         <SubHeadingStyle>
@@ -67,97 +75,111 @@ const EmailMarketingPage = ({ location }) => (
             </ParagraphStyle>
           </div>
         </PackageContainer>
+        <EmailForYouContainer>
+          <HeadingStyle>Is email marketing for you?</HeadingStyle>
+          <SubHeadingStyle>
+            For the most effective email marketing, you should have an SEO and
+            usability optimized website. There has to be a place for customer to
+            go after receiving an email.
+          </SubHeadingStyle>
+          <ParagraphStyle>
+            We highly recommend a{' '}
+            <ColoredLink to="/services/website">
+              conversion centered website
+            </ColoredLink>{' '}
+            and a couple months of{' '}
+            <ColoredLink to="/services">SEO work</ColoredLink> for the most
+            effective email marketing.
+          </ParagraphStyle>
+        </EmailForYouContainer>
       </PackageWrapper>
       <BuyWrapper>
-        <HeadingStyleLight>Get started</HeadingStyleLight>
-        <BuySubHeading>
-          Landing pages and weekly email marketing convert potential customers
-          into consistent buyers and keeps current customers coming back for
-          more.
-        </BuySubHeading>
-        <CardContainer>
-          <Card>
-            <HeadingStyle>Weekly Email Marketing</HeadingStyle>
-            <CardParagraph>$299/month</CardParagraph>
-            <ParagraphStyle>
-              Month to Month - <span>Done For You</span>
-            </ParagraphStyle>
-            <CardList>
-              <li>
-                <div>
-                  <CheckMark />
-                </div>
-                Copywriting for each email, this increases conversion rates
-              </li>
-              <li>
-                <div>
-                  <CheckMark />
-                </div>
-                Professionally designed weekly emails, if customers are
-                receptive we increase the rate of emails for free
-              </li>
-              <li>
-                <div>
-                  <CheckMark />
-                </div>
-                All of this is managed from your email marketing provider, we
-                provide guidance on this (we will need to securely acquire your
-                login information)
-              </li>
-              <li>
-                <div>
-                  <CheckMark />
-                </div>
-                Monthly ROI report and ongoing strategy
-              </li>
-            </CardList>
-            <CheckoutPackage plan="plan_EbqdENYKmxGw2I" />
-          </Card>
-          <Card>
-            <HeadingStyle>Email Marketing and Landing Page</HeadingStyle>
-            <CardParagraph>$399/month</CardParagraph>
-            <ParagraphStyle>
-              6 month contract - <span>Done For You</span>
-            </ParagraphStyle>
-            <ParagraphStyle>
-              Our landing pages are $149/month for 6 months total. Once the
-              contract ends for this service you pay $299/month, month to month.
-            </ParagraphStyle>
-            <CardList>
-              <li>
-                <div>
-                  <CheckMark />
-                </div>
-                Everything that is included in the weekly email marketing
-                package
-              </li>
-              <li>
-                <div>
-                  <CheckMark />
-                </div>
-                Copywriting and professional design of landing page based around
-                your business' colors and goal
-              </li>
-              <li>
-                <div>
-                  <CheckMark />
-                </div>
-                Ability to capture emails for email sequences
-              </li>
-              <li>
-                <div>
-                  <CheckMark />
-                </div>
-                Monthly ROI report and ongoing strategy
-              </li>
-            </CardList>
-            <CheckoutPackage plan="plan_EbqcYk2HLDYSc9" />
-          </Card>
-        </CardContainer>
-        <ProblemLink to="/contact">
-          Still unsure? Schedule an appointment
-          <RightIcon />
-        </ProblemLink>
+        <BuyContainer>
+          <HeadingStyleLight>Get started</HeadingStyleLight>
+          <BuySubHeading>
+            Landing pages and weekly email marketing convert potential customers
+            into consistent buyers and keeps current customers coming back for
+            more.
+          </BuySubHeading>
+          <CardContainer>
+            <Card>
+              <HeadingStyle>Weekly Email Marketing</HeadingStyle>
+              <CardParagraph>$299/month</CardParagraph>
+              <ParagraphStyle>
+                Month to Month - <span>Done For You</span>
+              </ParagraphStyle>
+              <CardList>
+                <li>
+                  <div>
+                    <CheckMark />
+                  </div>
+                  Copywriting for each email, this increases conversion rates
+                </li>
+                <li>
+                  <div>
+                    <CheckMark />
+                  </div>
+                  Professionally designed weekly emails, if customers are
+                  receptive we increase the rate of emails for free
+                </li>
+                <li>
+                  <div>
+                    <CheckMark />
+                  </div>
+                  Managed from your email marketing service, we will need access
+                  to this
+                </li>
+                <li>
+                  <div>
+                    <CheckMark />
+                  </div>
+                  Monthly growth report and ongoing strategy
+                </li>
+              </CardList>
+              <CheckoutPackage plan="plan_EbqdENYKmxGw2I" />
+            </Card>
+            <Card>
+              <HeadingStyle>Email &amp; Landing Page</HeadingStyle>
+              <CardParagraph>$399/month</CardParagraph>
+              <ParagraphStyle>
+                6 month contract - <span>Done For You</span>
+              </ParagraphStyle>
+              <CardList>
+                <li>
+                  <div>
+                    <CheckMark />
+                  </div>
+                  Everything that is included in the weekly email marketing
+                  package
+                </li>
+                <li>
+                  <div>
+                    <CheckMark />
+                  </div>
+                  Copywriting and professional design of landing page based
+                  around your business' colors and goal
+                </li>
+                <li>
+                  <div>
+                    <CheckMark />
+                  </div>
+                  Ability to capture emails for email sequences
+                </li>
+                <li>
+                  <div>
+                    <CheckMark />
+                  </div>
+                  Monthly growth report and ongoing strategy
+                </li>
+              </CardList>
+              <CheckoutPackage plan="plan_EbqcYk2HLDYSc9" />
+            </Card>
+          </CardContainer>
+          <ProblemLink to="/contact">
+            Request more information
+            <RightIcon />
+          </ProblemLink>
+        </BuyContainer>
       </BuyWrapper>
     </Layout>
   </>

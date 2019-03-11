@@ -6,19 +6,12 @@ import {
   ParagraphStyle,
   FeedbackLinkStyle,
 } from './styles/TextStyles'
-import faqBGdesktop from '../images/frequently-asked-questions-desktop.jpg'
 import { RightIcon } from './styles/IconStyles'
 import { device } from './styles/MediaQueries'
 
 const FAQwrapper = styled.div`
   width: 100%;
   padding: 3rem 0;
-  background-image: linear-gradient(
-      to right bottom,
-      rgba(30, 197, 255, 0.9),
-      rgba(3, 89, 117, 0.9)
-    ),
-    url(${faqBGdesktop});
   color: #fff;
   text-align: center;
 `

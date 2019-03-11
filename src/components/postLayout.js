@@ -20,6 +20,12 @@ const PostWrapper = styled.div`
 const PersonContainer = styled.div`
   display: flex;
   align-items: center;
+
+  p {
+    span {
+      display: block;
+    }
+  }
 `
 
 const PostImg = styled(Img)`

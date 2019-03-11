@@ -55,16 +55,12 @@ const ServicesSection = () => (
     <div>
       <ServicesSubHeading>
         <ChartIcon />
-        Conversion centered websites
+        Online Advertisements
       </ServicesSubHeading>
       <ParagraphStyle>
-        Our beautiful websites are extremely fast and strategized for
-        conversion.
+        Boost your ranking with paid web traffic, pairs well with SEO packages.{' '}
+        <em>Add on after purchase</em>
       </ParagraphStyle>
-      <PlainLink to="/services/website">
-        Learn More
-        <RightIcon />
-      </PlainLink>
     </div>
     <div>
       <ServicesSubHeading>

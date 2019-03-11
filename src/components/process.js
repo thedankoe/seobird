@@ -16,6 +16,10 @@ const ProcessWrapper = styled.div`
   @media ${device.laptopL} {
     width: 95%;
   }
+
+  @media ${device.tabletS} {
+    text-align: left;
+  }
 `
 
 export const ProcessList = styled.ol`

@@ -22,9 +22,20 @@ export const BuyWrapper = styled.div`
   color: #fff;
 `
 
-const BuyContainer = styled.div`
+export const BuyContainer = styled.div`
   width: ${props => props.theme.maxWidth};
   margin: 0 auto;
+
+  h2 {
+    ::after {
+      @media ${device.tabletS} {
+        margin: 1.5rem auto 0 auto;
+      }
+    }
+    @media ${device.tabletS} {
+      text-align: center;
+    }
+  }
 
   @media ${device.desktopL} {
     width: 80%;

@@ -66,6 +66,8 @@ export default class SelectBox extends Component {
     showItems: false,
   }
 
+  componentDidMount() {}
+
   componentDidUpdate() {}
 
   dropDown = () => {

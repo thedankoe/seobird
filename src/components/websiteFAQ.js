@@ -10,6 +10,11 @@ const MarketingEnd = styled.h4`
   text-align: center;
   font-size: 2.2rem;
   color: ${props => props.theme.secondary};
+
+  @media ${device.tabletS} {
+    width: 95%;
+    text-align: left;
+  }
 `
 
 const MarketingEndParagraph = styled(ParagraphStyle)`
@@ -19,6 +24,10 @@ const MarketingEndParagraph = styled(ParagraphStyle)`
 
   @media ${device.tablet} {
     width: 90%;
+  }
+
+  @media ${device.tabletS} {
+    text-align: left;
   }
 `
 

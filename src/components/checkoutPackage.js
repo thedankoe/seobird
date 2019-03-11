@@ -13,8 +13,8 @@ const CheckoutPackage = class extends React.Component {
     event.preventDefault()
     const { error } = await this.stripe.redirectToCheckout({
       items: [{ plan, quantity: 1 }],
-      successUrl: `http://localhost:8000/checkout-success/`,
-      cancelUrl: `http://localhost:8000/`,
+      successUrl: `https://www.seo-bird.com/checkout-success/`,
+      cancelUrl: `https://www.seo-bird.com/`,
     })
 
     if (error) {

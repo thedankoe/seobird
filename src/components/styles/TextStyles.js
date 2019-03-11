@@ -16,6 +16,10 @@ const HeadingStyle = styled.h2`
     margin: 1.5rem auto 0 auto;
     background: ${props => props.theme.secondaryLight};
     display: block;
+
+    @media ${device.tabletS} {
+      margin: 1.5rem 0 0 0;
+    }
   }
   span {
     font-weight: 600;
@@ -27,6 +31,10 @@ const HeadingStyle = styled.h2`
 
   @media ${device.tabletL} {
     font-size: 2.5rem;
+  }
+
+  @media ${device.tabletS} {
+    text-align: left;
   }
 `
 
@@ -44,6 +52,10 @@ const HeadingStyleLight = styled.h2`
     margin: 1.5rem auto 0 auto;
     background: ${props => props.theme.secondaryLight};
     display: block;
+
+    @media ${device.tabletS} {
+      margin: 1.5rem 0 0 0;
+    }
   }
   span {
     font-weight: 600;
@@ -55,6 +67,10 @@ const HeadingStyleLight = styled.h2`
 
   @media ${device.tabletL} {
     font-size: 2.5rem;
+  }
+
+  @media ${device.tabletS} {
+    text-align: left;
   }
 `
 
@@ -81,7 +97,6 @@ const ParagraphStyle = styled.p`
   font-size: 2.2rem;
   font-weight: 500;
   span {
-    display: block;
     font-weight: 600;
   }
 `

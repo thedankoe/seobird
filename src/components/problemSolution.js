@@ -23,6 +23,10 @@ const ProblemWrapper = styled.div`
   @media ${device.laptop} {
     width: 90%;
   }
+
+  @media ${device.tabletS} {
+    text-align: left;
+  }
 `
 
 const ProblemContainer = styled.div`
@@ -39,6 +43,17 @@ const WrapperBlue = styled.div`
     ${props => props.theme.primary}
   );
   color: #fff;
+
+  h2 {
+    ::after {
+      @media ${device.tabletS} {
+        margin: 1.5rem auto 0 auto;
+      }
+    }
+    @media ${device.tabletS} {
+      text-align: center;
+    }
+  }
 `
 
 const ProbContainerBlue = styled.div`
@@ -59,12 +74,20 @@ export const ParagraphSecondary = styled(ParagraphStyle)`
   color: ${props => props.theme.secondary};
   font-weight: 500;
   text-align: center;
+
+  @media ${device.tabletS} {
+    text-align: left;
+  }
 `
 
 const ParagraphBlue = styled(ParagraphStyle)`
   color: #fff;
   margin-bottom: ${props => props.theme.textSpace};
   text-align: center;
+
+  @media ${device.tabletS} {
+    text-align: left;
+  }
 `
 
 const ParagraphBlueBold = styled(ParagraphStyle)`

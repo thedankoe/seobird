@@ -13,6 +13,12 @@ import { device } from '../components/styles/MediaQueries'
 
 const FAQWrapper = styled.div`
   margin: ${props => props.theme.sectionSpace} 0;
+
+  @media ${device.tabletS} {
+    width: 95%;
+    margin: ${props => props.theme.sectionSpace} auto;
+    text-align: left;
+  }
 `
 
 const FAQContainer = styled.div`
